@@ -36,10 +36,10 @@ void Table::calcTable(){
         int rowTot=0;
         
         for(int j = 0; j < cols; j++){
-            rowTot += table[rows*i+j];
+            rowTot += table[rows*i+(i*1)+j];
         }
         
-        rowSum[rows] = rowTot; 
+        rowSum[i] = rowTot; 
     }
     
     //Calculate columns
@@ -47,10 +47,10 @@ void Table::calcTable(){
         int colTot = 0;
         
         for(int j = 0; j < rows; j++){
-            colTot += table[cols*i+j];
+            colTot += table[cols*j+i];
         }
         
-        colSum[cols] = colTot;
+        colSum[i] = colTot;
     }
     
     //Calculate Total

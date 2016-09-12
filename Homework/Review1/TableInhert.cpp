@@ -35,25 +35,27 @@ TableInhert::TableInhert(char* words, int rows, int cols): Table(words, rows, co
     augTable = new int[(this->rows+1)*(this->cols+1)];
     
     //Loops through rows
+    int index = 0;
+    
     for(int i = 0; i < this->rows+1; i++){
         //Loops through columns
         for(int j = 0 ; j < this->cols; j++){
             //Copy table column contents to aug table
-            augTable[this->rows*i+j] = table[this->rows*i+j];
+            augTable[index++] = table[this->rows*i+(i*1)+j];
         }
         
         //Add row sum to end of column
-        augTable[this->rows*i+this->cols] = rowSum[i];
+        augTable[index++] = rowSum[i];
     }
     
     //Loops through the columns
     for(int i = 0; i < this->cols; i++){
         //Copy column sums to end of table
-        augTable[this->rows*(this->rows+1)+i] = colSum[i];
+        augTable[index++] = colSum[i];
     }
     
     //Copy total to last space of table
-    augTable[(this->rows+1)*(this->cols+1)] = total;
+    augTable[index] = total;
     
 }
 
