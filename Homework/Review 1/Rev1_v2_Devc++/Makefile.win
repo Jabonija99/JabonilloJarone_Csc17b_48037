@@ -1,0 +1,34 @@
+# Project: Rev1_v2
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o Table.o TableInhert.o
+LINKOBJ  = main.o Table.o TableInhert.o
+LIBS     = -L"C:/cygwin64/lib" -static-libstdc++ -static-libgcc
+INCS     = 
+CXXINCS  = 
+BIN      = Rev1_v2.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Table.o: Table.cpp
+	$(CPP) -c Table.cpp -o Table.o $(CXXFLAGS)
+
+TableInhert.o: TableInhert.cpp
+	$(CPP) -c TableInhert.cpp -o TableInhert.o $(CXXFLAGS)
