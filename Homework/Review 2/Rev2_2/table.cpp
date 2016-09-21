@@ -16,6 +16,7 @@ Table::Table(char* words, int rows, int cols) {
     //Initiate total
     total = 0;
 
+    //Assign values to table
     for(int i = 0; i < this->rows*this->cols; i++){
            table[i] = 100+i;
     }
