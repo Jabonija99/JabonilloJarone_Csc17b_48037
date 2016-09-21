@@ -58,11 +58,11 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/rev1_v1_fileio.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/rev1_v1.2_fileio.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/rev1_v1_fileio.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/rev1_v1.2_fileio.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/rev1_v1_fileio ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/rev1_v1.2_fileio ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/Table.o: Table.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -85,7 +85,7 @@ ${OBJECTDIR}/main.o: main.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/rev1_v1_fileio.exe
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/rev1_v1.2_fileio.exe
 
 # Subprojects
 .clean-subprojects:

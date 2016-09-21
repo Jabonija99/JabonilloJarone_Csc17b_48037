@@ -21,8 +21,8 @@ class TableInhert: public Table{
         int *augTable;
     public:
         TableInhert(char*, int, int);
-        ~TableInhert(){delete []augTable;};
-        const int *getAugTable(void){return augTable;};
+        ~TableInhert(){delete []augTable;}
+        const int *getAugTable(void){return augTable;}
 
 };
 

@@ -13,11 +13,10 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
     table.cpp \
     tableinhert.cpp
 
-HEADERS  += mainwindow.h \
+HEADERS  += \
     table.h \
     tableinhert.h
 

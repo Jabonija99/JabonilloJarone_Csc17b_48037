@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Rev1_v1
+PROJECTNAME=Rev1_v1.1_Netbeans
 
 # Active Configuration
 DEFAULTCONF=Debug

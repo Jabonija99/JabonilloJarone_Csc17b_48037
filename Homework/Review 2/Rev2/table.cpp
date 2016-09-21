@@ -11,7 +11,11 @@
  * Created on September 2, 2016, 9:30 PM
  */
 
+#include <fstream>
+
 #include "Table.h"
+
+using namespace std;
 
 Table::Table(char* words, int rows, int cols) {
     this->rows = rows;
@@ -23,9 +27,22 @@ Table::Table(char* words, int rows, int cols) {
 
     total = 0;
 
-    for(int i = 0; i < this->rows*this->cols; i++){
-        table[i] = 100+i;
+
+    //Open file
+    ifstream file (words);
+    //If the file is open
+    if(file.is_open()){
+        int i = 0, data;
+        //Read data from file
+        while(file >> data){
+            //Assign values to table
+            table[i]=data;
+            //Increment index
+            i++;
+        }
     }
+    //Close file
+    file.close();
 
     calcTable();
 }

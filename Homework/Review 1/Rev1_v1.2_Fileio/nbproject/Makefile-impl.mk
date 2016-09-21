@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Rev1_v1_Fileio
+PROJECTNAME=Rev1_v1.2_Fileio
 
 # Active Configuration
 DEFAULTCONF=Debug
