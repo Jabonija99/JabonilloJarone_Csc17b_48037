@@ -1,3 +1,9 @@
+QT += core gui
+
+greaterThan(QT_MAJOR_VERSION,4): QT += widgets
+
+TARGET  = find.pro
+
 TEMPLATE      = app
 HEADERS       = finddialog.h
 SOURCES       = finddialog.cpp \
