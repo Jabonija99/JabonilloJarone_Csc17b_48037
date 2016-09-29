@@ -1,13 +1,16 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+//Inherits the main window
 #include <QMainWindow>
 
-class QAction;
-class QLabel;
+//Predefine classes
+class QAction;      //Qt Action library
+class QLabel;       //Qt Labels
 class FindDialog;
 class Spreadsheet;
 
+//Main window class : inherits Qt main window
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -16,13 +19,15 @@ public:
     MainWindow();
 
 protected:
+    //Closes an event
     void closeEvent(QCloseEvent *event);
 
 private slots:
-    void newFile();
-    void open();
-    bool save();
-    bool saveAs();
+    //Gui functions
+    void newFile(); //Create new file
+    void open(); //Open file
+    bool save(); //Save sheet
+    bool saveAs(); //Save sheet as
     void find();
     void goToCell();
     void sort();
@@ -32,6 +37,7 @@ private slots:
     void spreadsheetModified();
 
 private:
+    //Functions for menu functions
     void createActions();
     void createMenus();
     void createContextMenu();
@@ -46,6 +52,7 @@ private:
     void updateRecentFileActions();
     QString strippedName(const QString &fullFileName);
 
+    //Declare objects
     Spreadsheet *spreadsheet;
     FindDialog *findDialog;
     QLabel *locationLabel;
@@ -53,10 +60,12 @@ private:
     QStringList recentFiles;
     QString curFile;
 
+    //Enumeration of max files
     enum { MaxRecentFiles = 5 };
     QAction *recentFileActions[MaxRecentFiles];
     QAction *separatorAction;
 
+    //Declare menu items and action signals
     QMenu *fileMenu;
     QMenu *editMenu;
     QMenu *selectSubMenu;

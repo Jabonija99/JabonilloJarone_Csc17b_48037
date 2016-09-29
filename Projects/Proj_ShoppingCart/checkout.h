@@ -7,18 +7,26 @@ class QPushButton;
 class QLabel;
 class QLineEdit;
 
-class Checkout
+class Checkout : public QDialog
 {
     Q_OBJECT
 
     private:
-        QPushButton * submit;
-        QLabel *instructions;
-        QLineEdit *line;
+        //Widgets
+        QPushButton * submit;   //Submit Button
+        QLabel *lbName;         //Name Label
+        QLabel *lbAddrs;        //Address Label
+        QLabel *lbPhone;        //Phone Label
+        QLineEdit *leName;      //Name textbox
+        QLineEdit *leAddrs;     //Address textbox
+        QLineEdit *lePhone;     //Phone textbox
     public:
-        Checkout();
+        Checkout(QWidget *parent=0);
+
     signals:
+
     private slots:
+        void enableSubmit(const QString&text);
 };
 
 #endif // CHECKOUT_H
