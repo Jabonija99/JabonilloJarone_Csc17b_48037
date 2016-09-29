@@ -42,6 +42,7 @@ class Character
         int attack(); //Calculates attack
         int getHit(int); //Calculates health loss
         void attackChar(Character &target);//Calculates attack on target character
+        bool isDead(){return getHP() < 1;}
 
         //Name set/get
         void setName(string name);
