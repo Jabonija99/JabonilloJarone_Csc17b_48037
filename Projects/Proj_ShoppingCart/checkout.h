@@ -6,6 +6,8 @@
 class QPushButton;
 class QLabel;
 class QLineEdit;
+class QPlainTextEdit;
+class QSpacerItem;
 
 class Checkout : public QDialog
 {
@@ -13,19 +15,30 @@ class Checkout : public QDialog
 
     private:
         //Widgets
-        QPushButton * submit;   //Submit Button
+        QPushButton *submit;    //Submit Button
+        QPushButton *cancel;    //Cancel Button
+
         QLabel *lbName;         //Name Label
         QLabel *lbAddrs;        //Address Label
         QLabel *lbPhone;        //Phone Label
+
         QLineEdit *leName;      //Name textbox
         QLineEdit *leAddrs;     //Address textbox
         QLineEdit *lePhone;     //Phone textbox
-    public:
-        Checkout(QWidget *parent=0);
 
+        QPlainTextEdit *display; //Checkout display
+
+        QSpacerItem *spacer;        //LayoutSpacer
+
+    public:
+        //Constructor
+        Checkout(QWidget *parent=0);
     signals:
 
     private slots:
+        //Pulls text from line editors
+        void pullText();
+        //Enable submit button
         void enableSubmit(const QString&text);
 };
 
