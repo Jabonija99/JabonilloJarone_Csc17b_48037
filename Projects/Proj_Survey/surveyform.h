@@ -10,6 +10,7 @@ class QLineEdit;
 class SurveyForm : public QDialog
 {
     Q_OBJECT
+
     private:
         QLabel *lbName;
         QLabel *lbQ1;
@@ -24,6 +25,7 @@ class SurveyForm : public QDialog
         QLineEdit *leQ4;
 
         QPushButton *submit;
+        QPushButton *cancel;
     public:
         SurveyForm(QWidget *parent =0);
     private slots:
