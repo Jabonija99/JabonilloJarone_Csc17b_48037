@@ -6,6 +6,7 @@
 class QLabel;
 class QPushButton;
 class QLineEdit;
+class QFile;
 
 class SurveyForm : public QDialog
 {
@@ -26,10 +27,12 @@ class SurveyForm : public QDialog
 
         QPushButton *submit;
         QPushButton *cancel;
+
+        QFile *outFile;
     public:
         SurveyForm(QWidget *parent =0);
     private slots:
-        void saveForm();
+        void saveForm(const QString&);
         void enableSubmit(const QString&text);
 };
 

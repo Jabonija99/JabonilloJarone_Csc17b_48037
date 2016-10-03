@@ -64,12 +64,18 @@ SurveyForm::SurveyForm(QWidget *parent):QWidget(parent){
 }
 
 
-void SurveyForm::saveForm(){
+void SurveyForm::saveForm(const QString& text){
     //Saves file to text
+    file = new QFile(tr(leName->text() + ".txt"));
 }
 
 
 void SurveyForm::enableSubmit(const QString& text){
-    QString msg =
+    QString msg = tr(leName->text() + "\n"+
+                     leQ1->text() + "\n"+
+                     leQ2->text() + "\n"+
+                     leQ3->text() + "\n"+
+                     leQ4->text() + "\n");
+    saveForm(msg);
 }
 
