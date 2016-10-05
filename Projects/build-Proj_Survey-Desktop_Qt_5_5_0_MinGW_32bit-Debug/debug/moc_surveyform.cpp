@@ -61,15 +61,15 @@ static const uint qt_meta_data_SurveyForm[] = {
  // slots: name, argc, parameters, tag, flags
        1,    0,   44,    2, 0x08 /* Private */,
        3,    1,   45,    2, 0x08 /* Private */,
-       4,    0,   48,    2, 0x08 /* Private */,
-       5,    0,   49,    2, 0x08 /* Private */,
-       6,    0,   50,    2, 0x08 /* Private */,
-       7,    0,   51,    2, 0x08 /* Private */,
+       4,    1,   48,    2, 0x08 /* Private */,
+       5,    0,   51,    2, 0x08 /* Private */,
+       6,    0,   52,    2, 0x08 /* Private */,
+       7,    0,   53,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void, QMetaType::QString,    2,
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::Bool,    2,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -85,7 +85,7 @@ void SurveyForm::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->txtConfirm(); break;
         case 1: _t->enableSubmit((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 2: _t->enableLEQ1(); break;
+        case 2: _t->enableLEQ1((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 3: _t->enableLEQ2(); break;
         case 4: _t->enableLEQ3(); break;
         case 5: _t->enableLEQ4(); break;

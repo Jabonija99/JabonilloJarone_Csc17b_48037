@@ -69,7 +69,13 @@ void SurveyForm::setConnects(){
             this, SLOT(enableSubmit(const QString&)));
 
     connect(rbQ1_3, SIGNAL(toggled()),
-            this, SLOT(enableLEQ1()));
+            this, SLOT(enableLEQ1(rbQ1_3->isChecked())));
+    connect(rbQ2_3, SIGNAL(toggled()),
+            this, SLOT(enableLEQ2()));
+    connect(rbQ3_3, SIGNAL(toggled()),
+            this, SLOT(enableLEQ3()));
+    connect(rbQ4_3, SIGNAL(toggled()),
+            this, SLOT(enableLEQ4()));
 
 
     connect(submit, SIGNAL(clicked()),
@@ -162,26 +168,25 @@ void SurveyForm::layItems(){
 
 void SurveyForm::txtConfirm(){
     txtTY->show();
-    connect(txtTY, SIGNAL(closed()),
-            this, SLOT(close()));
+    this->close();
 }
 
 void SurveyForm::enableSubmit(const QString& text){
     submit->setEnabled(!text.isEmpty());
 }
 
-void SurveyForm::enableLEQ1(){
-    leQ1->setEnabled(true);
+void SurveyForm::enableLEQ1(bool flag){
+    leQ1->setEnabled(flag);
 }
 
 void SurveyForm::enableLEQ2(){
-    leQ2->setEnabled(true);
+    leQ2->setEnabled(rbQ2_3->isChecked());
 }
 
 void SurveyForm::enableLEQ3(){
-    leQ3->setEnabled(true);
+    leQ3->setEnabled(rbQ3_3->isChecked());
 }
 
 void SurveyForm::enableLEQ4(){
-    leQ4->setEnabled(true);
+    leQ4->setEnabled(rbQ4_3->isChecked());
 }

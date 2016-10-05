@@ -8,7 +8,8 @@ Endtext::Endtext(QWidget *parent) : QDialog(parent)
     spacer = new QSpacerItem(50,20);
     spacer2 = new QSpacerItem(300,20);
 
-    exit();
+    connect(btQuit, SIGNAL(clicked()),
+            this, SLOT(close()));
 
     QHBoxLayout *botLayout = new QHBoxLayout;
     botLayout->addSpacerItem(spacer);
@@ -32,10 +33,4 @@ Endtext::Endtext(QWidget *parent) : QDialog(parent)
     setLayout(mainLayout);
     setFixedHeight(200);
     setFixedWidth(500);
-}
-
-void Endtext::exit(){
-    connect(btQuit, SIGNAL(clicked()),
-            this, SLOT(close()));
-    emit closed();
 }

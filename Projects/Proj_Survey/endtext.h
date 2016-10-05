@@ -18,12 +18,6 @@ class Endtext : public QDialog
 
     public:
         Endtext(QWidget *parent = 0);
-
-    signals:
-        void closed();
-
-    private slots:
-        void exit();
 };
 
 #endif // ENDTEXT_H

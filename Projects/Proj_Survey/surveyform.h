@@ -72,7 +72,7 @@ class SurveyForm : public QDialog
     private slots:
         void txtConfirm();
         void enableSubmit(const QString&);
-        void enableLEQ1();
+        void enableLEQ1(bool);
         void enableLEQ2();
         void enableLEQ3();
         void enableLEQ4();
