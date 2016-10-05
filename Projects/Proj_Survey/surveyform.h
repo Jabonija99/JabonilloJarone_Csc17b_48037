@@ -16,6 +16,11 @@ class SurveyForm : public QDialog
     Q_OBJECT
 
     private:
+        //System functions
+        void setItems();
+        void setConnects();
+        void layItems();
+
         //Labels
         QLabel *lbName;
         QLabel *lbQ1;
@@ -65,9 +70,12 @@ class SurveyForm : public QDialog
     public:
         SurveyForm(QWidget *parent =0);
     private slots:
-        void saveForm(const QString&);
-        void openBox();
+        void txtConfirm();
         void enableSubmit(const QString&);
+        void enableLEQ1();
+        void enableLEQ2();
+        void enableLEQ3();
+        void enableLEQ4();
 };
 
 #endif // SURVEYFORM_H

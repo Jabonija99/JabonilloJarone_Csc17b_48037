@@ -2,6 +2,12 @@
 #include "surveyform.h"
 
 SurveyForm::SurveyForm(QWidget *parent):QDialog (parent){
+    setItems();
+    setConnects();
+    layItems();
+}
+
+void SurveyForm::setItems(){
     //General Information
     lbName = new QLabel(tr("Name"));
     leName = new QLineEdit;
@@ -54,16 +60,26 @@ SurveyForm::SurveyForm(QWidget *parent):QDialog (parent){
     //End Text Box
     txtTY = new Endtext;
 
+}
 
+
+void SurveyForm::setConnects(){
     //Connections
     connect(leName, SIGNAL(textChanged(const QString&)),
             this, SLOT(enableSubmit(const QString&)));
+
+    connect(rbQ1_3, SIGNAL(toggled()),
+            this, SLOT(enableLEQ1()));
+
+
     connect(submit, SIGNAL(clicked()),
-            this, SLOT(openBox()));
+            this, SLOT(txtConfirm()));
     connect(cancel, SIGNAL(clicked()),
             this, SLOT(close()));
 
+}
 
+void SurveyForm::layItems(){
     //Layouts
     QHBoxLayout *genderLayout = new QHBoxLayout;
     genderLayout->addWidget(rbM);
@@ -141,20 +157,10 @@ SurveyForm::SurveyForm(QWidget *parent):QDialog (parent){
     setWindowTitle(tr("Survey Form"));
     setFixedHeight(600);
     setFixedWidth(800);
+
 }
 
-
-void SurveyForm::saveForm(const QString& text){
-    QString msg = leName->text() + tr("\n")+
-                     leQ1->text() + tr("\n")+
-                     leQ2->text() + tr("\n")+
-                     leQ3->text() + tr("\n")+
-                     leQ4->text() + tr("\n");
-    //Saves file to text
-    //outfile = new QFile(tr(leName->text() + ".txt"));
-}
-
-void SurveyForm::openBox(){
+void SurveyForm::txtConfirm(){
     txtTY->show();
     connect(txtTY, SIGNAL(closed()),
             this, SLOT(close()));
@@ -164,3 +170,18 @@ void SurveyForm::enableSubmit(const QString& text){
     submit->setEnabled(!text.isEmpty());
 }
 
+void SurveyForm::enableLEQ1(){
+    leQ1->setEnabled(true);
+}
+
+void SurveyForm::enableLEQ2(){
+    leQ2->setEnabled(true);
+}
+
+void SurveyForm::enableLEQ3(){
+    leQ3->setEnabled(true);
+}
+
+void SurveyForm::enableLEQ4(){
+    leQ4->setEnabled(true);
+}

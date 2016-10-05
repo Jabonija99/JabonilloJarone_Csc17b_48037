@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'endtext.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.7.0)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.5.0)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -12,7 +12,7 @@
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'endtext.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.7.0. It"
+#error "This file was generated using the moc from 5.5.0. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -84,7 +84,6 @@ void Endtext::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
             typedef void (Endtext::*_t)();
             if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&Endtext::closed)) {
                 *result = 0;
-                return;
             }
         }
     }
