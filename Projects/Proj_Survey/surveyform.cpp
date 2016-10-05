@@ -1,81 +1,166 @@
 #include <QtWidgets>
 #include "surveyform.h"
 
-SurveyForm::SurveyForm(QWidget *parent):QWidget(parent){
+SurveyForm::SurveyForm(QWidget *parent):QDialog (parent){
+    //General Information
     lbName = new QLabel(tr("Name"));
-    leName = new QLineEdit();
+    leName = new QLineEdit;
+    rbM = new QRadioButton(tr("Male"));
+    rbF = new QRadioButton(tr("Female"));
 
-    lbQ1 = new QLabel(tr(""));
-    leQ1 = new QLineEdit();
+    //Question 1
+    lbQ1 = new QLabel(tr("Do you like surveys?"));
+    rbQ1_1 = new QRadioButton(tr("Yes"));
+    rbQ1_2 = new QRadioButton(tr("No"));
+    rbQ1_3 = new QRadioButton(tr("Other"));
+    leQ1 = new QLineEdit;
+    leQ1->setEnabled(false);
 
-    lbQ2 = new QLabel(tr(""));
-    leQ2 = new QLineEdit();
+    //Question 2
+    lbQ2 = new QLabel(tr("Do you like this survey?"));
+    rbQ2_1 = new QRadioButton(tr("Yes"));
+    rbQ2_2 = new QRadioButton(tr("No"));
+    rbQ2_3 = new QRadioButton(tr("Other"));
+    leQ2 = new QLineEdit;
+    leQ2->setEnabled(false);
 
-    lbQ3 = new QLabel(tr(""));
-    leQ3 = new QLineEdit();
+    //Question 3
+    lbQ3 = new QLabel(tr("How would you rate this survey?"));
+    rbQ3_1 = new QRadioButton(tr("Yes"));
+    rbQ3_2 = new QRadioButton(tr("No"));
+    rbQ3_3 = new QRadioButton(tr("Other"));
+    leQ3 = new QLineEdit;
+    leQ3->setEnabled(false);
 
-    lbQ4 = new QLabel(tr(""));
-    leQ4 = new QLineEdit();
+    //Question 4
+    lbQ4 = new QLabel(tr("Would you ever take this survey again?"));
+    rbQ4_1 = new QRadioButton(tr("Yes"));
+    rbQ4_2 = new QRadioButton(tr("No"));
+    rbQ4_3 = new QRadioButton(tr("Other"));
+    leQ4 = new QLineEdit;
+    leQ4->setEnabled(false);
 
+    //Buttons
     submit = new QPushButton(tr("Submit"));
     submit->setDefault(true);
     submit->setEnabled(false);
 
     cancel = new QPushButton(tr("Cancel"));
 
+    //Spacers
+    spQ = new QSpacerItem(100,300);
+    spBtn = new QSpacerItem(300,50);
+
+    //End Text Box
+    txtTY = new Endtext;
+
+
+    //Connections
     connect(leName, SIGNAL(textChanged(const QString&)),
-            submit, SLOT(setEnabled));
+            this, SLOT(enableSubmit(const QString&)));
     connect(submit, SIGNAL(clicked()),
-            this, SLOT(saveForm()));
+            this, SLOT(openBox()));
     connect(cancel, SIGNAL(clicked()),
-            this, SLOT(close());
-
-    QVBoxLayout * leftLayout = new QVBoxLayout;
-    leftLayout->addWidget(lbName);
-    leftLayout->addWidget(lbQ1);
-    leftLayout->addWidget(lbQ2);
-    leftLayout->addWidget(lbQ3);
-    leftLayout->addWidget(lbQ4);
-
-    QVBoxLayout * rightLayout = new QVBoxLayout;
-    rightLayout->addWidget(leName);
-    rightLayout->addWidget(leQ1);
-    rightLayout->addWidget(leQ2);
-    rightLayout->addWidget(leQ3);
-    rightLayout->addWidget(leQ4);
+            this, SLOT(close()));
 
 
-    QHBoxLayout * topLayout = new QHBoxLayout;
-    topLayout->addLayout(leftLayout);
-    topLayout->addLayout(rightLayout);
+    //Layouts
+    QHBoxLayout *genderLayout = new QHBoxLayout;
+    genderLayout->addWidget(rbM);
+    genderLayout->addWidget(rbF);
 
-    QVBoxLayout * botLayout = new QVBoxLayout;
-    botLayout->addWidget(submit);
-    botLayout->addWidget(cancel);
+    //Name Layout
+    QVBoxLayout *nameLayout = new QVBoxLayout;
+    nameLayout->addWidget(lbName);
+    nameLayout->addWidget(leName);
+    nameLayout->addLayout(genderLayout);
 
+    //Question 1 Layout
+    QVBoxLayout *q1Layout = new QVBoxLayout;
+    q1Layout->addWidget(lbQ1);
+    q1Layout->addWidget(rbQ1_1);
+    q1Layout->addWidget(rbQ1_2);
+    q1Layout->addWidget(rbQ1_3);
+    q1Layout->addWidget(leQ1);
+
+    //Question 2 Layout
+    QVBoxLayout *q2Layout = new QVBoxLayout;
+    q2Layout->addWidget(lbQ2);
+    q2Layout->addWidget(rbQ2_1);
+    q2Layout->addWidget(rbQ2_2);
+    q2Layout->addWidget(rbQ2_3);
+    q2Layout->addWidget(leQ2);
+
+    //Question 3 Layout
+    QVBoxLayout *q3Layout = new QVBoxLayout;
+    q3Layout->addWidget(lbQ3);
+    q3Layout->addWidget(rbQ3_1);
+    q3Layout->addWidget(rbQ3_2);
+    q3Layout->addWidget(rbQ3_3);
+    q3Layout->addWidget(leQ3);
+
+    //Question 4 Layout
+    QVBoxLayout *q4Layout = new QVBoxLayout;
+    q4Layout->addWidget(lbQ4);
+    q4Layout->addWidget(rbQ4_1);
+    q4Layout->addWidget(rbQ4_2);
+    q4Layout->addWidget(rbQ4_3);
+    q4Layout->addWidget(leQ4);
+
+    //Question Layout
+    QVBoxLayout *qLayout = new QVBoxLayout;
+    qLayout->addLayout(nameLayout);
+    qLayout->addLayout(q1Layout);
+    qLayout->addLayout(q2Layout);
+    qLayout->addLayout(q3Layout);
+    qLayout->addLayout(q4Layout);
+
+    //Top layout
+    QHBoxLayout *topLayout = new QHBoxLayout;
+    topLayout->addSpacerItem(spQ);
+    topLayout->addLayout(qLayout);
+    topLayout->addSpacerItem(spQ);
+
+    //Button layout
+    QVBoxLayout *btnLayout = new QVBoxLayout;
+    btnLayout->addWidget(submit);
+    btnLayout->addWidget(cancel);
+
+    //Bottom layout
+    QHBoxLayout *botLayout = new QHBoxLayout;
+    botLayout->addSpacerItem(spBtn);
+    botLayout->addLayout(btnLayout);
+    botLayout->addSpacerItem(spBtn);
+
+    //Main layout
     QVBoxLayout *mainLayout = new QVBoxLayout;
     mainLayout->addLayout(topLayout);
     mainLayout->addLayout(botLayout);
-    setLayout(mainLayout);
 
+    setLayout(mainLayout);
     setWindowTitle(tr("Survey Form"));
     setFixedHeight(600);
-    setFixedWidth(800);)
+    setFixedWidth(800);
 }
 
 
 void SurveyForm::saveForm(const QString& text){
+    QString msg = leName->text() + tr("\n")+
+                     leQ1->text() + tr("\n")+
+                     leQ2->text() + tr("\n")+
+                     leQ3->text() + tr("\n")+
+                     leQ4->text() + tr("\n");
     //Saves file to text
-    file = new QFile(tr(leName->text() + ".txt"));
+    //outfile = new QFile(tr(leName->text() + ".txt"));
 }
 
+void SurveyForm::openBox(){
+    txtTY->show();
+    connect(txtTY, SIGNAL(closed()),
+            this, SLOT(close()));
+}
 
 void SurveyForm::enableSubmit(const QString& text){
-    QString msg = tr(leName->text() + "\n"+
-                     leQ1->text() + "\n"+
-                     leQ2->text() + "\n"+
-                     leQ3->text() + "\n"+
-                     leQ4->text() + "\n");
-    saveForm(msg);
+    submit->setEnabled(!text.isEmpty());
 }
 

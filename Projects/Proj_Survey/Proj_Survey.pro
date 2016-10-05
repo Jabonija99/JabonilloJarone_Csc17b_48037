@@ -14,10 +14,10 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
     surveyform.cpp \
-    mainwindow.cpp
+    endtext.cpp
 
 HEADERS  += \
     surveyform.h \
-    mainwindow.h
+    endtext.h
 
 FORMS    +=
