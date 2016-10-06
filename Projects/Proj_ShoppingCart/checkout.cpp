@@ -5,20 +5,15 @@
 //Checkout window class
 Checkout::Checkout(QWidget *parent) : QDialog(parent)
 {
-    //Create name Label and line editor
-    lbName = new QLabel(tr("Name:"));
-    leName = new QLineEdit;
+    setItems();
+    setConnect();
+    layItems();
+}
 
-    //Create address label and line editor
-    lbAddrs = new QLabel(tr("Address:"));
-    leAddrs = new QLineEdit;
-
-    //Create phone label and line editor
-    lbPhone = new QLabel(tr("Phone"));
-    lePhone = new QLineEdit;
+void Checkout::setItems(){
 
     //Create submit button
-    submit = new QPushButton(tr("Submit"));
+    submit = new QPushButton(tr("Checkout"));
     submit->setDefault(true);//Set it as default button
     submit->setEnabled(false);//Disable button
 
@@ -26,27 +21,28 @@ Checkout::Checkout(QWidget *parent) : QDialog(parent)
     cancel = new QPushButton(tr("Cancel"));
 
     //Create display textbox
-    display = new QPlainTextEdit(tr("Name:\nAddress:\nPhone:\n"));
+    display = new QPlainTextEdit(tr("Summary\n=====================\n"
+                                    "Name:\nAddress:\nPhone:\n"));
     display->setFixedWidth(200); //Set textbox width
 
     //Create spacer item (width, height)
     spacer = new QSpacerItem(300,150);
+}
 
+void Checkout::setConnect(){
     //Connectors
-    //Enable submit button when text is changed
-    connect(leName, SIGNAL(textChanged(const QString&)),
-            this, SLOT(enableSubmit(const QString&)));
-    connect(leAddrs, SIGNAL(textChanged(const QString&)),
-            this, SLOT(enableSubmit(const QString&)));
-    connect(lePhone, SIGNAL(textChanged(const QString&)),
-            this, SLOT(enableSubmit(const QString&)));
+
     //Pull text when the submit button is clicked
     connect(submit,SIGNAL(clicked()),
             this, SLOT(pullText()));
     //Close program f cancel button clicked
     connect(cancel,SIGNAL(clicked()),
             this,SLOT(close()));
+}
 
+void Checkout::layItems(){
+
+    /*
     //Layouts
     //Create horziontal layout
     QHBoxLayout *topLeftLayout = new QHBoxLayout;
@@ -85,15 +81,19 @@ Checkout::Checkout(QWidget *parent) : QDialog(parent)
     setWindowTitle(tr("Shopping Cart"));//Set window title
     setFixedHeight(sizeHint().height());//Set fixed height
     setFixedWidth(sizeHint().width());  //Set fixed width
+    */
 }
 
 void Checkout::pullText(){
     //Pull string into text
-    QString text = tr("Name: ")+ leName->text() +tr("\n")
+    /*
+    QString text = tr("Summary\n=====================\n")
+            + tr("Name: ")+ leName->text() +tr("\n")
             + tr("Address: ")+ leAddrs->text() +tr("\n")
             + tr("Phone: ")+ lePhone->text() +tr("\n");
     //Set text into textbox
     display->setPlainText(text);
+    */
 }
 
 void Checkout::enableSubmit(const QString &text){

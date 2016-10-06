@@ -14,17 +14,13 @@ class Checkout : public QDialog
     Q_OBJECT
 
     private:
+        void setItems();        //Create widget function
+        void setConnect();      //Set connections
+        void layItems();        //Layouts
+
         //Widgets
         QPushButton *submit;    //Submit Button
         QPushButton *cancel;    //Cancel Button
-
-        QLabel *lbName;         //Name Label
-        QLabel *lbAddrs;        //Address Label
-        QLabel *lbPhone;        //Phone Label
-
-        QLineEdit *leName;      //Name textbox
-        QLineEdit *leAddrs;     //Address textbox
-        QLineEdit *lePhone;     //Phone textbox
 
         QPlainTextEdit *display; //Checkout display
 
@@ -33,7 +29,6 @@ class Checkout : public QDialog
     public:
         //Constructor
         Checkout(QWidget *parent=0);
-    signals:
 
     private slots:
         //Pulls text from line editors

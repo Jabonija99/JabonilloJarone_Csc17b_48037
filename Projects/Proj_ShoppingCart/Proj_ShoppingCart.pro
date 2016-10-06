@@ -14,13 +14,11 @@ TEMPLATE = app
 
 SOURCES += main.cpp \
     checkout.cpp \
-    mainwindow.cpp \
-    mainwindow.cpp
+    forminfo.cpp
 
 HEADERS  += \
     checkout.h \
-    mainwindow.h \
-    mainwindow.h
+    forminfo.h
 
 FORMS += mainwindow.ui \
     mainwindow.ui
