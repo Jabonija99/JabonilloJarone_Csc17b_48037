@@ -12,29 +12,35 @@ Checkout::Checkout(QWidget *parent) : QDialog(parent)
 
 void Checkout::setItems(){
 
+    lbHeader = new QLabel(tr("Order Summary\n========================"));
+    lbItems = new QLabel(tr("Items\n========================"));
+    lbInfo = new QLabel(tr("Information\n========================"));
+
     //Create submit button
     submit = new QPushButton(tr("Checkout"));
     submit->setDefault(true);//Set it as default button
-    submit->setEnabled(false);//Disable button
+    submit->setEnabled(true);//Enable button
 
     //Create cancel button
     cancel = new QPushButton(tr("Cancel"));
 
     //Create display textbox
-    display = new QPlainTextEdit(tr("Summary\n=====================\n"
-                                    "Name:\nAddress:\nPhone:\n"));
-    display->setFixedWidth(200); //Set textbox width
+    tbPrice = new QPlainTextEdit(tr("Payment\n=====================\n"));
+    tbPrice->setFixedWidth(200); //Set textbox width
 
     //Create spacer item (width, height)
-    spacer = new QSpacerItem(300,150);
+    spHeadr = new QSpacerItem(300,250);
+    spPrice = new QSpacerItem(300,50);
+    spBtn = new QSpacerItem(50,200);
+
+    txtTy = new Endtext;
 }
 
 void Checkout::setConnect(){
-    //Connectors
-
+    //Connections
     //Pull text when the submit button is clicked
     connect(submit,SIGNAL(clicked()),
-            this, SLOT(pullText()));
+            this, SLOT(complete()));
     //Close program f cancel button clicked
     connect(cancel,SIGNAL(clicked()),
             this,SLOT(close()));
@@ -42,58 +48,41 @@ void Checkout::setConnect(){
 
 void Checkout::layItems(){
 
-    /*
-    //Layouts
-    //Create horziontal layout
-    QHBoxLayout *topLeftLayout = new QHBoxLayout;
-    topLeftLayout->addWidget(lbName);   //Add name label
-    topLeftLayout->addWidget(leName);   //Add name text
+    QVBoxLayout * leftLayout = new QVBoxLayout;
+    leftLayout->addWidget(lbHeader);
+    leftLayout->addSpacerItem(spHeadr);
+    leftLayout->addWidget(lbInfo);
+    leftLayout->addSpacerItem(spHeadr);
+    leftLayout->addWidget(lbItems);
+    leftLayout->addSpacerItem(spHeadr);
 
-    //Create horizontal layout
-    QHBoxLayout *midLeftLayout = new QHBoxLayout;
-    midLeftLayout->addWidget(lbAddrs);  //Add address label
-    midLeftLayout->addWidget(leAddrs);  //Add address text
+    QVBoxLayout *btnLayout = new QVBoxLayout;
+    btnLayout->addWidget(submit);
+    btnLayout->addWidget(cancel);
 
-    //Create horizontal layout
-    QHBoxLayout *botLeftLayout = new QHBoxLayout;
-    botLeftLayout->addWidget(lbPhone);  //Add phone label
-    botLeftLayout->addWidget(lePhone);  //Add phone text
+    QHBoxLayout *centerLayout = new QHBoxLayout;
+    centerLayout->addSpacerItem(spBtn);
+    centerLayout->addLayout(btnLayout);
+    centerLayout->addSpacerItem(spBtn);
 
-    //Create vertical layout
-    QVBoxLayout *leftLayout = new QVBoxLayout;
-    leftLayout->addLayout(topLeftLayout);   //Add top layout
-    leftLayout->addLayout(midLeftLayout);   //Add middle layout
-    leftLayout->addLayout(botLeftLayout);   //Add bottom layout
-    leftLayout->addSpacerItem(spacer);      //Add spacer item
-
-    //Create vertical layout
     QVBoxLayout *rightLayout = new QVBoxLayout;
-    rightLayout->addWidget(display);    //Add textbox
-    rightLayout->addWidget(submit);     //Add submit button
-    rightLayout->addWidget(cancel);     //Add cancel button
+    rightLayout->addSpacerItem(spPrice);
+    rightLayout->addWidget(tbPrice);
+    rightLayout->addSpacerItem(spPrice);
+    rightLayout->addLayout(centerLayout);
 
-    //Create horizontal layout
     QHBoxLayout *mainLayout = new QHBoxLayout;
-    mainLayout->addLayout(leftLayout);  //Add left layout
-    mainLayout->addLayout(rightLayout); //Add right layout
+    mainLayout->addLayout(leftLayout);
+    mainLayout->addLayout(rightLayout);
+    setLayout(mainLayout);
+    setFixedHeight(600);
+    setFixedWidth(800);
 
-    setLayout(mainLayout);              //Set main layout
-    setWindowTitle(tr("Shopping Cart"));//Set window title
-    setFixedHeight(sizeHint().height());//Set fixed height
-    setFixedWidth(sizeHint().width());  //Set fixed width
-    */
 }
 
-void Checkout::pullText(){
-    //Pull string into text
-    /*
-    QString text = tr("Summary\n=====================\n")
-            + tr("Name: ")+ leName->text() +tr("\n")
-            + tr("Address: ")+ leAddrs->text() +tr("\n")
-            + tr("Phone: ")+ lePhone->text() +tr("\n");
-    //Set text into textbox
-    display->setPlainText(text);
-    */
+void Checkout::complete(){
+    txtTy->show();
+    this->close();
 }
 
 void Checkout::enableSubmit(const QString &text){

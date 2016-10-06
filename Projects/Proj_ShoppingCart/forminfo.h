@@ -2,6 +2,7 @@
 #define FORMINFO_H
 
 #include <QDialog>
+#include "checkout.h"
 
 class QPushButton;
 class QLabel;
@@ -14,6 +15,8 @@ class FormInfo : public QDialog
     Q_OBJECT
 
     private:
+        Checkout *wCheckout;    //Checkout window
+
         void setItems();
         void setConnect();
         void layItems();

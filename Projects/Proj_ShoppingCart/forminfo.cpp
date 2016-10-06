@@ -25,47 +25,58 @@ void FormInfo::setItems(){
     //Create phone label and line editor
     lbPhone = new QLabel(tr("Phone"));
     lePhone = new QLineEdit;
+    //Set max character length to 10
     lePhone->setMaxLength(10);
 
+    //Create submit button
     submit = new QPushButton(tr("Submit"));
+    //Set it as the default button
     submit->setDefault(true);
+    //Disable the button
     submit->setEnabled(false);
 
+    //Create cancel button
     cancel = new QPushButton(tr("Cancel"));
 
+    //Create format spacers
     spInfo = new QSpacerItem(100,10);
     spInfo2 = new QSpacerItem(800, 5);
     spInfo3 = new QSpacerItem(800,500);
     spBtn = new QSpacerItem(300,100);
+
+    wCheckout = new Checkout;
 }
 
 void FormInfo::setConnect(){
     //Enable submit button when text is changed
     connect(leName, SIGNAL(textChanged(const QString&)),
-            this, SLOT(enableSubmit(const QString&)));
+            this, SLOT(enableBtn(const QString&)));
     connect(leAddrs, SIGNAL(textChanged(const QString&)),
-            this, SLOT(enableSubmit(const QString&)));
+            this, SLOT(enableBtn(const QString&)));
     connect(lePhone, SIGNAL(textChanged(const QString&)),
-            this, SLOT(enableSubmit(const QString&)));
+            this, SLOT(enableBtn(const QString&)));
 
+    //Open checkout window when submit is entered
     connect(submit, SIGNAL(clicked()),
             this, SLOT(openCheckout()));
-    connect(leName, SIGNAL(textChanged()),
-            this, SLOT(enableBtn(const QString&)));
+    connect(cancel, SIGNAL(clicked()),
+            this, SLOT(close()));
 }
 
 void FormInfo::layItems(){
 
+    //Layout for names
     QHBoxLayout *nameLayout = new QHBoxLayout;
     nameLayout->addSpacerItem(spInfo);
-    nameLayout->addWidget(lbName);
-    nameLayout->addWidget(leName);
-    nameLayout->addWidget(cbGender);
+    nameLayout->addWidget(lbName);  //Add name Label
+    nameLayout->addWidget(leName);  //Add name Line edit
+    nameLayout->addWidget(cbGender);//Add gender combo box
     nameLayout->addSpacerItem(spInfo);
 
+    //Layout for addresses
     QHBoxLayout *addrLayout = new QHBoxLayout;
     addrLayout->addSpacerItem(spInfo);
-    addrLayout->addWidget(lbAddrs);
+    addrLayout->addWidget(lbAddrs); //Add address label
     addrLayout->addWidget(leAddrs);
     addrLayout->addSpacerItem(spInfo);
 
@@ -104,7 +115,8 @@ void FormInfo::layItems(){
 }
 
 void FormInfo::openCheckout(){
-
+    wCheckout->show();
+    this->close();
 }
 
 void FormInfo::enableBtn(const QString &text){

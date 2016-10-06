@@ -20,8 +20,15 @@ class SurveyForm : public QDialog
         void setItems();
         void setConnects();
         void layItems();
+        //Window functions
+        void layQ1();
+        void layQ2();
+        void layQ3();
+        void layQ4();
+        int pg;
 
         //Labels
+        QLabel *lbWelcome;
         QLabel *lbName;
         QLabel *lbQ1;
         QLabel *lbQ2;
@@ -62,6 +69,8 @@ class SurveyForm : public QDialog
         //Buttons
         QPushButton *submit;
         QPushButton *cancel;
+        QPushButton *next;
+        QPushButton *back;
 
         //Completion Text
         Endtext *txtTY;

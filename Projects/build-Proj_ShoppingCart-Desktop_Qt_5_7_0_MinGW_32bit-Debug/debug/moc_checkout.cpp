@@ -30,13 +30,13 @@ struct qt_meta_stringdata_Checkout_t {
 static const qt_meta_stringdata_Checkout_t qt_meta_stringdata_Checkout = {
     {
 QT_MOC_LITERAL(0, 0, 8), // "Checkout"
-QT_MOC_LITERAL(1, 9, 8), // "pullText"
+QT_MOC_LITERAL(1, 9, 8), // "complete"
 QT_MOC_LITERAL(2, 18, 0), // ""
 QT_MOC_LITERAL(3, 19, 12), // "enableSubmit"
 QT_MOC_LITERAL(4, 32, 4) // "text"
 
     },
-    "Checkout\0pullText\0\0enableSubmit\0text"
+    "Checkout\0complete\0\0enableSubmit\0text"
 };
 #undef QT_MOC_LITERAL
 
@@ -70,7 +70,7 @@ void Checkout::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         Checkout *_t = static_cast<Checkout *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->pullText(); break;
+        case 0: _t->complete(); break;
         case 1: _t->enableSubmit((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         default: ;
         }

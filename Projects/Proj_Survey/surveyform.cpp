@@ -8,6 +8,11 @@ SurveyForm::SurveyForm(QWidget *parent):QDialog (parent){
 }
 
 void SurveyForm::setItems(){
+    pg = 0;
+
+    lbWelcome = new QLabel(tr("Welcome to the survey!\n"
+                              "Please enter your name:"));
+
     //General Information
     lbName = new QLabel(tr("Name"));
     leName = new QLineEdit;
@@ -47,14 +52,19 @@ void SurveyForm::setItems(){
     leQ4->setEnabled(false);
 
     //Buttons
+    next = new QPushButton("Next");
+    next->setDefault(true);
+    next->setEnabled(true);
+
+    back = new QPushButton("Back");
+
     submit = new QPushButton(tr("Submit"));
-    submit->setDefault(true);
-    submit->setEnabled(false);
 
     cancel = new QPushButton(tr("Cancel"));
 
+
     //Spacers
-    spQ = new QSpacerItem(100,300);
+    spQ = new QSpacerItem(800,300);
     spBtn = new QSpacerItem(300,50);
 
     //End Text Box
@@ -68,6 +78,7 @@ void SurveyForm::setConnects(){
     connect(leName, SIGNAL(textChanged(const QString&)),
             this, SLOT(enableSubmit(const QString&)));
 
+    /*
     connect(rbQ1_3, SIGNAL(toggled()),
             this, SLOT(enableLEQ1(rbQ1_3->isChecked())));
     connect(rbQ2_3, SIGNAL(toggled()),
@@ -76,7 +87,7 @@ void SurveyForm::setConnects(){
             this, SLOT(enableLEQ3()));
     connect(rbQ4_3, SIGNAL(toggled()),
             this, SLOT(enableLEQ4()));
-
+    */
 
     connect(submit, SIGNAL(clicked()),
             this, SLOT(txtConfirm()));
@@ -159,12 +170,39 @@ void SurveyForm::layItems(){
     mainLayout->addLayout(topLayout);
     mainLayout->addLayout(botLayout);
 
+
+    /*
+    QHBoxLayout *gendrLayout = new QHBoxLayout;
+    gendrLayout->addWidget(rbM);
+    gendrLayout->addWidget(rbF);
+
+    QHBoxLayout *nameLayout = new QHBoxLayout;
+    nameLayout->addWidget(lbName);
+    nameLayout->addWidget(leName);
+
+    QVBoxLayout *topLayout = new QVBoxLayout;
+    topLayout->addSpacerItem(spQ);
+    topLayout->addWidget(lbWelcome);
+    topLayout->addLayout(nameLayout);
+    topLayout->addSpacerItem(spQ);
+
+    QHBoxLayout *botLayout = new QHBoxLayout;
+    botLayout->addSpacerItem(spBtn);
+    botLayout->addWidget(next);
+    botLayout->addSpacerItem(spBtn);
+
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    mainLayout->addLayout(topLayout);
+    mainLayout->addLayout(botLayout);
+    */
+
     setLayout(mainLayout);
     setWindowTitle(tr("Survey Form"));
     setFixedHeight(600);
     setFixedWidth(800);
 
 }
+
 
 void SurveyForm::txtConfirm(){
     txtTY->show();
