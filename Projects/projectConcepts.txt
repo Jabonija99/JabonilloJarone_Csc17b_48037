@@ -1,0 +1,16 @@
+menu
+event processing
+2d graphics
+drag and drop
+input/output
+dialog boxes
+	*internal/ external
+splash screens
+main windows
+buttons
+line edits
+combo boxes
+layouts
+data bases
+multithreading
+networking

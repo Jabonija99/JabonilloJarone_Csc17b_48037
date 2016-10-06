@@ -7,6 +7,7 @@ class QPushButton;
 class QLabel;
 class QLineEdit;
 class QSpacerItem;
+class QComboBox;
 
 class FormInfo : public QDialog
 {
@@ -21,6 +22,8 @@ class FormInfo : public QDialog
         QLabel *lbAddrs;        //Address Label
         QLabel *lbPhone;        //Phone Label
 
+        QComboBox *cbGender;    //Gender type
+
         QLineEdit *leName;      //Name textbox
         QLineEdit *leAddrs;     //Address textbox
         QLineEdit *lePhone;     //Phone textbox
@@ -28,7 +31,10 @@ class FormInfo : public QDialog
         QPushButton *submit;    //Submit button
         QPushButton *cancel;    //Cancel button
 
-        QSpacerItem *spacer;    //Spacer item
+        QSpacerItem *spInfo;    //Info Spacer
+        QSpacerItem *spInfo2;   //Info Spacer 2
+        QSpacerItem *spInfo3;
+        QSpacerItem *spBtn;     //Button spacer
 
     public:
         FormInfo(QWidget *parent = 0);
