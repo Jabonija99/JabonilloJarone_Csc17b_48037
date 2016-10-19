@@ -1,0 +1,14 @@
+INPUT(
+./release\main.o
+./release\character.o
+./release\inv.o
+./release\item.o
+./release\player.o
+./release\pjock.o
+./release\pmusicmaj.o
+./release\pcsmaj.o
+./release\eexam.o
+./release\edebt.o
+./release\efood.o
+./release\eduedate.o
+);

@@ -1,0 +1,14 @@
+INPUT(
+./debug\main.o
+./debug\character.o
+./debug\inv.o
+./debug\item.o
+./debug\player.o
+./debug\pjock.o
+./debug\pmusicmaj.o
+./debug\pcsmaj.o
+./debug\eexam.o
+./debug\edebt.o
+./debug\efood.o
+./debug\eduedate.o
+);
