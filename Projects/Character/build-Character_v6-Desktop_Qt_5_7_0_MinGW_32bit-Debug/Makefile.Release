@@ -251,7 +251,13 @@ release/main.o: ../Character_v6/main.cpp C:/Qt/5.7/mingw53_32/include/QtWidgets/
 		C:/Qt/5.7/mingw53_32/include/QtGui/qvector2d.h \
 		C:/Qt/5.7/mingw53_32/include/QtGui/qtouchdevice.h \
 		C:/Qt/5.7/mingw53_32/include/QtGui/qguiapplication.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qinputmethod.h
+		C:/Qt/5.7/mingw53_32/include/QtGui/qinputmethod.h \
+		../Character_v6/item.h \
+		../Character_v6/inv.h \
+		../Character_v6/character.h \
+		../Character_v6/pcsmaj.h \
+		../Character_v6/player.h \
+		../Character_v6/edebt.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o ..\Character_v6\main.cpp
 
 release/character.o: ../Character_v6/character.cpp ../Character_v6/character.h \
