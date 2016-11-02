@@ -15,11 +15,13 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     shop.cpp \
-    item.cpp
+    item.cpp \
+    cart.cpp
 
 HEADERS  += mainwindow.h \
     shop.h \
-    item.h
+    item.h \
+    cart.h
 
 DISTFILES +=
 

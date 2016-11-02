@@ -1,0 +1,12 @@
+INPUT(
+./debug/main.o
+./debug/mainwindow.o
+./debug/shop.o
+./debug/item.o
+./debug/cart.o
+./debug/qrc_Resources.o
+./debug/moc_mainwindow.o
+./debug/moc_shop.o
+./debug/moc_item.o
+./debug/moc_cart.o
+);

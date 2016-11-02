@@ -9,9 +9,10 @@ MainWindow::MainWindow(QWidget *parent)
 {
     item = new Item("punchingbag.txt");
     store = new Shop();
+    cart = new Cart();
 
-
-    setCentralWidget(store);
+    setCentralWidget(cart);
+    //setCentralWidget(store);
     //setCentralWidget(item);
 
 

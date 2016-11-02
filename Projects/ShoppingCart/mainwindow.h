@@ -5,6 +5,7 @@
 
 #include "item.h"
 #include "shop.h"
+#include "cart.h"
 
 class MainWindow : public QMainWindow
 {
@@ -20,6 +21,7 @@ private:
 
     Shop *store;
     Item *item;
+    Cart *cart;
 
     //Menu buttons
     QMenu *fileMenu;

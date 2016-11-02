@@ -1,7 +1,7 @@
 #include "shop.h"
 #include <QtWidgets>
 
-const int SCREEN_HEIGHT = 768;
+const int SCREEN_HEIGHT = 750;
 const int SCREEN_WIDTH = 1024;
 
 Shop::Shop(QWidget *parent) :
