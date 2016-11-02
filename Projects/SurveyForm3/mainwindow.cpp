@@ -48,6 +48,8 @@ void MainWindow::nextWindow(){
     setPg(++pg);
 
     stackedWidget->setCurrentIndex(pg);
+
+    updateStatusbar();
 }
 
 void MainWindow::prevWindow(){
@@ -55,10 +57,12 @@ void MainWindow::prevWindow(){
     setPg(--pg);
 
     stackedWidget->setCurrentIndex(pg);
+
+    updateStatusbar();
 }
 
 void MainWindow::updateStatusbar(){
-    /*
+
     if(pg <1)
         btPrev->setEnabled(false);
     else
@@ -68,7 +72,7 @@ void MainWindow::updateStatusbar(){
         btNext->setEnabled(false);
     else
         btNext->setEnabled(true);
-    */
+
 }
 
 void MainWindow::createActions(){

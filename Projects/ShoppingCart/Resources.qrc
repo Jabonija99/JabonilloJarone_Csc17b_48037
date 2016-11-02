@@ -1,0 +1,10 @@
+<RCC>
+    <qresource>
+        <file>images/punchingbag.png</file>
+	<file>images/hoop.png</file>
+	<file>images/tablet.png</file>
+	<file>inv/punchingbag.txt</file>
+	<file>inv/hoop.txt</file>
+	<file>inv/tablet.txt</file>
+    </qresource>
+</RCC>
