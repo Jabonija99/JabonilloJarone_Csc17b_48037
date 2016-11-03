@@ -38,15 +38,15 @@ private:
     QGroupBox *mkGrp_Item();
     QGroupBox *mkGrp_More();
 
-    bool error = false;
-    bool info = false;
-private slots:
-    void moreInfo();
+    bool error;
+    bool info;
 
 public:
     Item(QWidget *parent = 0);
     Item(QString, QWidget *parent = 0 );
 
+public slots:
+    void moreInfo();
 };
 
 #endif // ITEM_H

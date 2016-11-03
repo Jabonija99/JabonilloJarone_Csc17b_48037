@@ -8,6 +8,8 @@ const int SCREEN_WIDTH = 680;
 Item::Item(QString dir, QWidget *parent):
     QDialog(parent)
 {
+    error= false;
+    info = false;
     setItems(dir);
     setConnect();
     layItems();
