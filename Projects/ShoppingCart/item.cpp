@@ -25,13 +25,21 @@ void Item::setItems(QString dir){
     }
     else{
 
+
         QTextStream in(&file);
         QString img = in.readLine();
+
+        /*
+        name = in.readLine();
+        price = in.readLine().toFloat();
+        ship =  in.readLine().toFloat();
+        */
 
         QString name = in.readLine();
         QString price = in.readLine();
         QString ship =  in.readLine();
         QString desc = in.readLine();
+
 
         lbImage = new QLabel;
         pxImage = QPixmap(":images/"+img);
@@ -49,13 +57,16 @@ void Item::setItems(QString dir){
 
         lbName = new QLabel(name);
         lbPrice = new QLabel(price);
-        lbShip = new QLabel(ship);
+        if(ship>0)
+            lbShip = new QLabel(tr("Shipping:")+ship);
+        else
+            lbShip = new QLabel(tr("Free Shipping!"));
         lbDesc = new QLabel(desc);
     }
 
 
-    btAddCart = new QPushButton("Add to Cart");
-    btMore = new QPushButton("More Info");
+    btAddCart = new QPushButton(tr("Add to Cart"));
+    btMore = new QPushButton(tr("More Info"));
 
     spItems = new QSpacerItem(SCREEN_WIDTH, 70);
 

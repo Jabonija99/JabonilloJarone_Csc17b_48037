@@ -11,3 +11,16 @@ int main(int argc, char *argv[])
 
     return a.exec();
 }
+/*
+
+  TO DO LIST:
+
+  * Move buttons from item to shopping cart.
+  ** Set item slot as public
+  ** Transition screen on button press
+  * Create checkout class
+  * Create complete class
+  * Create stacked widgets
+  ** Find a way to read button clicks from central widget
+
+*/

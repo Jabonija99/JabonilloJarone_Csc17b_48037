@@ -67,7 +67,7 @@ QGroupBox* Cart::mkGrp_Summary(){
 }
 
 QGroupBox* Cart::mkGrp_Scroll(){
-    QGroupBox *groupbox = new QGroupBox("Items");
+    QGroupBox *groupbox = new QGroupBox("Cart");
 
     QVBoxLayout *vbox = new QVBoxLayout;
 

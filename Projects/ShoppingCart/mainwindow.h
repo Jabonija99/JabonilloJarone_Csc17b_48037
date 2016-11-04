@@ -6,6 +6,9 @@
 #include "item.h"
 #include "shop.h"
 #include "cart.h"
+#include "checkout.h"
+
+class QStackedWidget;
 
 class MainWindow : public QMainWindow
 {
@@ -22,6 +25,7 @@ private:
     Shop *store;
     Item *item;
     Cart *cart;
+    Checkout *checkout;
 
     //Menu buttons
     QMenu *fileMenu;
@@ -32,9 +36,23 @@ private:
     QAction *actQuit;
     QAction *actInfo;
 
+    QStackedWidget *stkWidget;
+    int pg;
+
+    QPushButton *btNext;
+    QPushButton *btPrev;
+
+private slots:
+    //Gui functions
+    void nextWindow();
+    void prevWindow();
+
+    void updateStatusbar();
+
 public:
     MainWindow(QWidget *parent = 0);
     ~MainWindow();
+    void setPg(int);
 };
 
 #endif // MAINWINDOW_H

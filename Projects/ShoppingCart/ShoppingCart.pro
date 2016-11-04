@@ -16,12 +16,14 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     shop.cpp \
     item.cpp \
-    cart.cpp
+    cart.cpp \
+    checkout.cpp
 
 HEADERS  += mainwindow.h \
     shop.h \
     item.h \
-    cart.h
+    cart.h \
+    checkout.h
 
 DISTFILES +=
 

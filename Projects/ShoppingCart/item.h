@@ -20,12 +20,18 @@ private:
     void setConnect();
     void layItems();
 
-    QPixmap pxImage;
-    QLabel *lbImage;
-    QLabel *lbName;
-    QLabel *lbPrice;
-    QLabel *lbShip;
-    QLabel *lbDesc;
+    /*
+    float price;      //item price
+    float ship;       //item shipping price
+    QString name;   //item name
+    */
+
+    QPixmap pxImage;//item image
+    QLabel *lbImage;//Label for image
+    QLabel *lbName; //Name label
+    QLabel *lbPrice;//Price label
+    QLabel *lbShip; //Shipping price label
+    QLabel *lbDesc; //description label
 
     QPushButton *btAddCart;
     QPushButton *btMore;
@@ -44,7 +50,11 @@ private:
 public:
     Item(QWidget *parent = 0);
     Item(QString, QWidget *parent = 0 );
-
+/*
+    int getPrice(){return price;}
+    int getShip(){return ship;}
+    QString getName(){return name;}
+*/
 public slots:
     void moreInfo();
 };
