@@ -30,7 +30,19 @@ void Shop::setItems(){
 }
 
 void Shop::setConnect(){
+    connect(item1, SIGNAL(btnPressed(bool)),
+            this, SLOT(readbtn(bool)));
+    connect(item2, SIGNAL(btnPressed(bool)),
+            this, SLOT(readbtn(bool)));
+    connect(item3, SIGNAL(btnPressed(bool)),
+            this, SLOT(readbtn(bool)));
 
+    connect(this, SIGNAL(btClicked(bool)),
+            item1, SLOT(moreinfo()));
+    connect(this, SIGNAL(btClicked(bool)),
+            item2, SLOT(moreinfo()));
+    connect(this, SIGNAL(btClicked(bool)),
+            item3, SLOT(moreinfo()));
 }
 
 void Shop::layItems(){
@@ -83,4 +95,8 @@ QGroupBox* Shop::mkGrp_Item(Item* item){
     groupbox->setLayout(vbox);
 
     return groupbox;
+}
+
+void Shop::readbtn(bool flag){
+    emit btClicked(true);
 }

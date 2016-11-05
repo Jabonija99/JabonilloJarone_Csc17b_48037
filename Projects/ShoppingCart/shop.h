@@ -35,9 +35,15 @@ private:
     QGroupBox *mkGrp_Scroll();
     QGroupBox *mkGrp_Item(Item*);
 
+private slots:
+    void readbtn(bool);
 
 public:
     Shop(QWidget*parent=0);
+
+
+signals:
+    void btClicked(bool flag);
 };
 
 #endif // SHOP_H

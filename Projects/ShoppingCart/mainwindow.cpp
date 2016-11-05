@@ -16,6 +16,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     stkWidget = new QStackedWidget;
     stkWidget->addWidget(store);
+    stkWidget->addWidget(item);
     stkWidget->addWidget(cart);
     stkWidget->addWidget(checkout);
 
@@ -51,6 +52,10 @@ void MainWindow::createActions(){
             this, SLOT(nextWindow()));
     connect(btPrev,SIGNAL(clicked()),
             this, SLOT(prevWindow()));
+    connect(item, SIGNAL(btnPressed(bool)),
+                         this,SLOT(toItem(bool)));
+    connect(store,SIGNAL(btClicked(bool)),
+            this, SLOT(toItem(bool)));
 
 }
 
@@ -81,8 +86,8 @@ void MainWindow::createStatusBar(){
 }
 
 void MainWindow::setPg(int page){
-    if(page > 2)
-        pg = 2;
+    if(page > 3)
+        pg = 3;
     else if(page < 0)
         pg = 0;
     else
@@ -108,6 +113,17 @@ void MainWindow::prevWindow(){
     updateStatusbar();
 }
 
+void MainWindow::toItem(bool flag){
+    if(flag){
+        setPg(1);
+        stkWidget->setCurrentIndex(pg);
+    }
+    else{
+        setPg(0);
+        stkWidget->setCurrentIndex(pg);
+    }
+}
+
 void MainWindow::updateStatusbar(){
 
     if(pg <1)
@@ -115,7 +131,7 @@ void MainWindow::updateStatusbar(){
     else
         btPrev->setEnabled(true);
 
-    if(pg>1)
+    if(pg>2)
         btNext->setEnabled(false);
     else
         btNext->setEnabled(true);

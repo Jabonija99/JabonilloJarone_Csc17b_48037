@@ -139,9 +139,11 @@ void Item::moreInfo(){
     if(!info){
         grpbox->show();
         info = true;
+        emit btnPressed(info);
     }
     else{
         grpbox->hide();
         info = false;
+        emit btnPressed(info);
     }
 }

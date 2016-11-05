@@ -46,6 +46,7 @@ private slots:
     //Gui functions
     void nextWindow();
     void prevWindow();
+    void toItem(bool);
 
     void updateStatusbar();
 
