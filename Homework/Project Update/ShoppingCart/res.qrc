@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>images/punchingbag.png</file>
+        <file>inv/punchingbag.txt</file>
+    </qresource>
+</RCC>
