@@ -29,6 +29,20 @@ Bullet::Bullet(QGraphicsItem *parent):
     timer->start(50);
 }
 
+void Bullet::moveUp(){
+
+}
+void Bullet::moveDown(){
+
+}
+void Bullet::moveLeft(){
+
+}
+void Bullet::moveRight(){
+
+}
+
+
 void Bullet::move(){
     //Check enemy collision then destroy both
     //QList of graphics items from collidingItems();
@@ -65,3 +79,4 @@ void Bullet::move(){
 
     }
 }
+

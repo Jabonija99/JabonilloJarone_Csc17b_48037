@@ -11,6 +11,10 @@ class Bullet : public QObject, public QGraphicsPixmapItem
     Q_OBJECT
 public:
     Bullet(QGraphicsItem *parent =0);
+    void moveUp();
+    void moveDown();
+    void moveLeft();
+    void moveRight();
 
 public slots:
     void move();

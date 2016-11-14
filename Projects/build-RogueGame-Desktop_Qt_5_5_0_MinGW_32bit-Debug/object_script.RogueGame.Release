@@ -1,0 +1,15 @@
+INPUT(
+./release/main.o
+./release/bullet.o
+./release/enemy.o
+./release/game.o
+./release/health.o
+./release/rect.o
+./release/score.o
+./release/player.o
+./release/qrc_res.o
+./release/moc_bullet.o
+./release/moc_enemy.o
+./release/moc_rect.o
+./release/moc_player.o
+);

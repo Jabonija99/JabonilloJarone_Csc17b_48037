@@ -2,6 +2,7 @@
 
 #include <QTimer>
 #include <QGraphicsScene>
+#include <QGraphicsRectItem>
 #include <cstdlib>
 #include <ctime>
 #include <stdlib.h>
@@ -63,7 +64,6 @@ void Enemy::idle(){
         }
     }
 
-    fireDwn();
 }
 
 void Enemy::fireUp(){
