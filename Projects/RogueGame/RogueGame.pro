@@ -4,7 +4,8 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui \
+            multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,7 +14,22 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp \
-    enemy.cpp
+    bullet.cpp \
+    enemy.cpp \
+    game.cpp \
+    health.cpp \
+    rect.cpp \
+    score.cpp \
+    player.cpp
 
 HEADERS  += \
-    enemy.h
+    bullet.h \
+    enemy.h \
+    game.h \
+    health.h \
+    rect.h \
+    score.h \
+    player.h
+
+RESOURCES += \
+    res.qrc
