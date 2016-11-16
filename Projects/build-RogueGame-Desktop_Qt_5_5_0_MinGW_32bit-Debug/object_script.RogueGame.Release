@@ -7,9 +7,11 @@ INPUT(
 ./release/rect.o
 ./release/score.o
 ./release/player.o
+./release/detectbx.o
 ./release/qrc_res.o
 ./release/moc_bullet.o
 ./release/moc_enemy.o
 ./release/moc_rect.o
 ./release/moc_player.o
+./release/moc_detectbx.o
 );

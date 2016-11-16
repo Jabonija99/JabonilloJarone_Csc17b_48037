@@ -20,7 +20,8 @@ SOURCES += main.cpp \
     health.cpp \
     rect.cpp \
     score.cpp \
-    player.cpp
+    player.cpp \
+    detectbx.cpp
 
 HEADERS  += \
     bullet.h \
@@ -29,7 +30,8 @@ HEADERS  += \
     health.h \
     rect.h \
     score.h \
-    player.h
+    player.h \
+    detectbx.h
 
 RESOURCES += \
     res.qrc

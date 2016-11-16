@@ -30,14 +30,21 @@ Enemy::Enemy() :
 
     //Create detection box
 
-    //Connect
-    //Timer item counts down and sends signal whenever it reaches 0
-    QTimer *timer = new QTimer(this);
-    connect(timer, SIGNAL(timeout()),
-            this, SLOT(idle()));
+    //Create timers
+    //Movement timer
+    QTimer *timer1 = new QTimer(this);
+    //Attack timer
+    QTimer *timer2 = new QTimer(this);
 
-    //Sets timer time to 50ms
-    timer->start(200);
+    //Connect timers
+    connect(timer1, SIGNAL(timeout()),
+            this, SLOT(idle()));
+    connect(timer2, SIGNAL(timeout()),
+            this, SLOT(fire()));
+
+
+    timer1->start(200);
+    timer2->start(1000);
 }
 
 void Enemy::idle(){
@@ -64,6 +71,28 @@ void Enemy::idle(){
         }
     }
 
+}
+
+void Enemy::fire(){
+    int dir = 0;
+
+    switch(dir){
+        case 0:
+            fireUp();
+            break;
+        case 1:
+            fireRgt();
+            break;
+        case 2:
+            fireDwn();
+            break;
+        case 3:
+            fireLft();
+            break;
+        default:
+            fireUp();
+            break;
+    }
 }
 
 void Enemy::fireUp(){
