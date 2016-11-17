@@ -7,9 +7,11 @@ INPUT(
 ./debug\rect.o
 ./debug\score.o
 ./debug\player.o
+./debug\detectbx.o
 ./debug\qrc_res.o
 ./debug\moc_bullet.o
 ./debug\moc_enemy.o
 ./debug\moc_rect.o
 ./debug\moc_player.o
+./debug\moc_detectbx.o
 );

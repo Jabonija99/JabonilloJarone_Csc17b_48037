@@ -29,6 +29,8 @@ Enemy::Enemy() :
     vel = 6;
 
     //Create detection box
+    findBox = new DetectBx();
+
 
     //Create timers
     //Movement timer

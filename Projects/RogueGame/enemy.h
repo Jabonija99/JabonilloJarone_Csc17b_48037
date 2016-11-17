@@ -4,6 +4,7 @@
 #include <QGraphicsRectItem> //Rectangle item
 #include <QGraphicsPixmapItem>
 #include <QObject> //allows signals and slots
+#include "detectbx.h"
 
 class Enemy :
         public QObject, public QGraphicsPixmapItem
@@ -11,7 +12,7 @@ class Enemy :
     Q_OBJECT
 private:
     //Detection box for enemy
-    QGraphicsRectItem *bxDetect;
+    DetectBx *findBox;
 
     int vel;
 public:
