@@ -29,7 +29,8 @@ Enemy::Enemy() :
     vel = 6;
 
     //Create detection box
-    findBox = new DetectBx();
+    //findBox = new DetectBx();
+    //scene()->addItem(findBox);
 
 
     //Create timers

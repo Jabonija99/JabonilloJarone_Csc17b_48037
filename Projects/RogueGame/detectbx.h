@@ -13,7 +13,7 @@ private:
     int height;
 
 public:
-    DetectBx();
+    DetectBx(QGraphicsItem* parent = 0);
 public slots:
     void scan();
 signals:

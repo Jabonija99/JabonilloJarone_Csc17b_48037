@@ -12,7 +12,7 @@ class Enemy :
     Q_OBJECT
 private:
     //Detection box for enemy
-    DetectBx *findBox;
+    //DetectBx *findBox;
 
     int vel;
 public:

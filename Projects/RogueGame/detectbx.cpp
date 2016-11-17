@@ -5,8 +5,8 @@
 #include <typeinfo>
 #include "player.h"
 
-DetectBx::DetectBx() :
-    QObject(), QGraphicsRectItem()
+DetectBx::DetectBx(QGraphicsItem* parent) :
+    QObject(), QGraphicsRectItem(parent)
 {
     width = 200;
     height = 200;
