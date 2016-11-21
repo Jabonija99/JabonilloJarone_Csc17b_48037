@@ -4,9 +4,13 @@ INPUT(
 ./debug/shop.o
 ./debug/item.o
 ./debug/cart.o
-./debug/qrc_Resources.o
+./debug/checkout.o
+./debug/items.o
+./debug/qrc_res.o
 ./debug/moc_mainwindow.o
 ./debug/moc_shop.o
 ./debug/moc_item.o
 ./debug/moc_cart.o
+./debug/moc_checkout.o
+./debug/moc_items.o
 );
