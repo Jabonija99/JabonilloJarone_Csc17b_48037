@@ -17,7 +17,7 @@ Item::Item(QString dir, QWidget *parent):
 void Item::setItems(QString dir){
     //Create item
 
-    QFile file(":inv/"+dir);
+    QFile file(":/items/inv/"+dir);
     if(!file.open(QIODevice::ReadOnly|QIODevice::Text)){
         qDebug() << "File failed to open!\n";
         error = true;
@@ -42,7 +42,7 @@ void Item::setItems(QString dir){
 
 
         lbImage = new QLabel;
-        pxImage = QPixmap(":images/"+img);
+        pxImage = QPixmap(":/imgs/deps/"+img);
 
         if(pxImage.isNull())
                 qDebug() <<"Pixmap is null!\n";

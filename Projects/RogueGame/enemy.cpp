@@ -5,6 +5,7 @@
 #include <QGraphicsRectItem>
 #include <cstdlib>
 #include <ctime>
+#include <vector>
 #include <stdlib.h>
 
 #include <QDebug>
@@ -47,7 +48,7 @@ Enemy::Enemy() :
 
 
     timer1->start(200);
-    timer2->start(1000);
+    timer2->start(2000);
 }
 
 void Enemy::idle(){
@@ -57,72 +58,38 @@ void Enemy::idle(){
 
     for(int i = 0; i < 3; i++){
         if(direction == 0){
+
             //Move enemy up
-            setPos(x(), y()-vel);
+            if(y()-50 > 0)
+                setPos(x(), y()-vel);
         }
         else if(direction == 1){
             //Move enemy down
-            setPos(x(), y()+vel);
+            if(y()+150 < 600)
+                setPos(x(), y()+vel);
         }
         else if(direction == 2){
             //Move enemy left
-            setPos(x()-vel, y());
+            if(x()-50 > 0)
+                setPos(x()-vel, y());
         }
         else if(direction == 3){
             //Move enemy right
-            setPos(x()+vel, y());
+            if(x()+150 < 800)
+                setPos(x()+vel, y());
         }
     }
 
 }
 
 void Enemy::fire(){
-    int dir = 0;
+    std::vector<Bullet*> bullets(8);
 
-    switch(dir){
-        case 0:
-            fireUp();
-            break;
-        case 1:
-            fireRgt();
-            break;
-        case 2:
-            fireDwn();
-            break;
-        case 3:
-            fireLft();
-            break;
-        default:
-            fireUp();
-            break;
+    for(int i = 0; i < 8; i++){
+        bullets[i] = new Bullet();
+        bullets[i]->setDir(i);
+        bullets[i]->setPos(x()+ 50, y()+50);
+        scene()->addItem(bullets[i]);
     }
-}
 
-void Enemy::fireUp(){
-    //Create bullet above object
-    Bullet *bullet = new Bullet();
-    bullet->setPos(x()+50, y());
-    scene()->addItem(bullet);
 }
-
-void Enemy::fireDwn(){
-    //Create bullet below object
-    Bullet *bullet = new Bullet();
-    bullet->setPos(x()+50, y()+100);
-    scene()->addItem(bullet);
-}
-
-void Enemy::fireLft(){
-    //Create bullet left of object
-    Bullet *bullet = new Bullet();
-    bullet->setPos(x(), y()+50);
-    scene()->addItem(bullet);
-}
-
-void Enemy::fireRgt(){
-    //Create bullet right of object
-    Bullet *bullet = new Bullet();
-    bullet->setPos(x()+100, y()+50);
-    scene()->addItem(bullet);
-}
-

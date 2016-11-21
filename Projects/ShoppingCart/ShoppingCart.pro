@@ -29,4 +29,4 @@ DISTFILES +=
 
 
 RESOURCES += \
-    Resources.qrc
+    res.qrc

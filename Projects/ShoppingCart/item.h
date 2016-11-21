@@ -56,8 +56,7 @@ public:
     QString getName(){return name;}
 */
 public slots:
-    void moreInfo(
-            );
+    void moreInfo();
 
 signals:
     void btnPressed(bool flag);

@@ -18,11 +18,6 @@ private:
 public:
     Enemy();
 
-    void fireUp();
-    void fireDwn();
-    void fireLft();
-    void fireRgt();
-
 public slots:
     void idle();
     void fire();

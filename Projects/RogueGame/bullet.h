@@ -9,12 +9,11 @@
 class Bullet : public QObject, public QGraphicsPixmapItem
 {
     Q_OBJECT
+private:
+    int dir; //direction for bullet
 public:
     Bullet(QGraphicsItem *parent =0);
-    void moveUp();
-    void moveDown();
-    void moveLeft();
-    void moveRight();
+    void setDir(int);
 
 public slots:
     void move();
