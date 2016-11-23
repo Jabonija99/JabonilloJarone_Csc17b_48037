@@ -49,31 +49,34 @@ SOURCES       = "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueG
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\game.cpp" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\health.cpp" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\score.cpp" \
-		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\player.cpp" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\enemyfood.cpp" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\foodbullet.cpp" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\enemybomb.cpp" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\bombbullet.cpp" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\enemydebt.cpp" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\debtbullet.cpp" \
-		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\coinblast.cpp" debug\qrc_res.cpp \
+		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\coinblast.cpp" \
+		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\character.cpp" \
+		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\inv.cpp" \
+		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\item.cpp" \
+		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\pjock.cpp" \
+		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\player.cpp" debug\qrc_res.cpp \
 		debug\moc_bullet.cpp \
 		debug\moc_enemy.cpp \
-		debug\moc_player.cpp \
 		debug\moc_enemyfood.cpp \
 		debug\moc_foodbullet.cpp \
 		debug\moc_enemybomb.cpp \
 		debug\moc_bombbullet.cpp \
 		debug\moc_enemydebt.cpp \
 		debug\moc_debtbullet.cpp \
-		debug\moc_coinblast.cpp
+		debug\moc_coinblast.cpp \
+		debug\moc_pjock.cpp
 OBJECTS       = debug/main.o \
 		debug/bullet.o \
 		debug/enemy.o \
 		debug/game.o \
 		debug/health.o \
 		debug/score.o \
-		debug/player.o \
 		debug/enemyfood.o \
 		debug/foodbullet.o \
 		debug/enemybomb.o \
@@ -81,44 +84,57 @@ OBJECTS       = debug/main.o \
 		debug/enemydebt.o \
 		debug/debtbullet.o \
 		debug/coinblast.o \
+		debug/character.o \
+		debug/inv.o \
+		debug/item.o \
+		debug/pjock.o \
+		debug/player.o \
 		debug/qrc_res.o \
 		debug/moc_bullet.o \
 		debug/moc_enemy.o \
-		debug/moc_player.o \
 		debug/moc_enemyfood.o \
 		debug/moc_foodbullet.o \
 		debug/moc_enemybomb.o \
 		debug/moc_bombbullet.o \
 		debug/moc_enemydebt.o \
 		debug/moc_debtbullet.o \
-		debug/moc_coinblast.o
+		debug/moc_coinblast.o \
+		debug/moc_pjock.o
 
 DIST          =  "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\bullet.h" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\enemy.h" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\game.h" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\health.h" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\score.h" \
-		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\player.h" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\enemyfood.h" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\foodbullet.h" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\enemybomb.h" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\bombbullet.h" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\enemydebt.h" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\debtbullet.h" \
-		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\coinblast.h" "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\main.cpp" \
+		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\coinblast.h" \
+		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\character.h" \
+		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\inv.h" \
+		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\item.h" \
+		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\pjock.h" \
+		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\player.h" "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\main.cpp" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\bullet.cpp" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\enemy.cpp" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\game.cpp" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\health.cpp" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\score.cpp" \
-		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\player.cpp" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\enemyfood.cpp" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\foodbullet.cpp" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\enemybomb.cpp" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\bombbullet.cpp" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\enemydebt.cpp" \
 		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\debtbullet.cpp" \
-		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\coinblast.cpp"
+		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\coinblast.cpp" \
+		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\character.cpp" \
+		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\inv.cpp" \
+		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\item.cpp" \
+		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\pjock.cpp" \
+		"..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\player.cpp"
 QMAKE_TARGET  = RogueGame
 DESTDIR        = debug\ #avoid trailing-slash linebreak
 TARGET         = RogueGame.exe
@@ -138,10 +154,10 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) RogueGame.zip $(SOURCES) $(DIST) "..\..\..\CIS17B_Rogue_Game\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\RogueGame.pro" C:\Qt\5.7\mingw53_32\mkspecs\features\spec_pre.prf C:\Qt\5.7\mingw53_32\mkspecs\qdevice.pri C:\Qt\5.7\mingw53_32\mkspecs\features\device_config.prf C:\Qt\5.7\mingw53_32\mkspecs\common\angle.conf C:\Qt\5.7\mingw53_32\mkspecs\qconfig.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dcore.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dcore_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dextras.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dextras_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dinput.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dinput_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dlogic.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dlogic_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dquick.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dquick_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dquickextras.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dquickextras_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dquickinput.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dquickinput_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dquickrender.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dquickrender_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3drender.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3drender_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_axbase.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_axbase_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_axcontainer.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_axcontainer_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_axserver.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_axserver_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_bluetooth.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_bluetooth_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_bootstrap_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_clucene_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_concurrent.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_concurrent_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_core.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_core_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_dbus.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_dbus_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_designer.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_designer_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_designercomponents_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_gamepad.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_gamepad_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_gui.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_gui_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_help.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_help_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_location.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_location_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_multimedia.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_multimedia_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_multimediawidgets.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_network.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_network_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_nfc.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_nfc_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_opengl.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_opengl_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_openglextensions.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_openglextensions_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_packetprotocol_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_platformsupport_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_positioning.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_positioning_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_printsupport.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_printsupport_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_purchasing.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_purchasing_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_qml.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_qml_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_qmldebug_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_qmldevtools_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_qmltest.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_qmltest_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_quick.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_quick_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_quickcontrols2.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_quickcontrols2_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_quickparticles_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_quicktemplates2_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_quickwidgets.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_quickwidgets_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_script.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_script_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_scripttools.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_scripttools_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_scxml.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_scxml_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_sensors.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_sensors_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_serialbus.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_serialbus_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_serialport.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_serialport_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_sql.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_sql_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_svg.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_svg_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_testlib.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_testlib_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_uiplugin.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_uitools.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_uitools_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_webchannel.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_webchannel_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_websockets.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_websockets_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_widgets.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_widgets_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_winextras.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_winextras_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_xml.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_xml_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_xmlpatterns.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_xmlpatterns_private.pri C:\Qt\5.7\mingw53_32\mkspecs\features\qt_functions.prf C:\Qt\5.7\mingw53_32\mkspecs\features\qt_config.prf C:\Qt\5.7\mingw53_32\mkspecs\features\win32\qt_config.prf C:\Qt\5.7\mingw53_32\mkspecs\win32-g++\qmake.conf C:\Qt\5.7\mingw53_32\mkspecs\features\spec_post.prf .qmake.stash C:\Qt\5.7\mingw53_32\mkspecs\features\exclusive_builds.prf C:\Qt\5.7\mingw53_32\mkspecs\features\default_pre.prf C:\Qt\5.7\mingw53_32\mkspecs\features\win32\default_pre.prf C:\Qt\5.7\mingw53_32\mkspecs\features\resolve_config.prf C:\Qt\5.7\mingw53_32\mkspecs\features\exclusive_builds_post.prf C:\Qt\5.7\mingw53_32\mkspecs\features\default_post.prf C:\Qt\5.7\mingw53_32\mkspecs\features\build_pass.prf C:\Qt\5.7\mingw53_32\mkspecs\features\qml_debug.prf C:\Qt\5.7\mingw53_32\mkspecs\features\win32\rtti.prf C:\Qt\5.7\mingw53_32\mkspecs\features\precompile_header.prf C:\Qt\5.7\mingw53_32\mkspecs\features\warn_on.prf C:\Qt\5.7\mingw53_32\mkspecs\features\qt.prf C:\Qt\5.7\mingw53_32\mkspecs\features\resources.prf C:\Qt\5.7\mingw53_32\mkspecs\features\moc.prf C:\Qt\5.7\mingw53_32\mkspecs\features\win32\opengl.prf C:\Qt\5.7\mingw53_32\mkspecs\features\uic.prf C:\Qt\5.7\mingw53_32\mkspecs\features\file_copies.prf C:\Qt\5.7\mingw53_32\mkspecs\features\win32\windows.prf C:\Qt\5.7\mingw53_32\mkspecs\features\testcase_targets.prf C:\Qt\5.7\mingw53_32\mkspecs\features\exceptions.prf C:\Qt\5.7\mingw53_32\mkspecs\features\yacc.prf C:\Qt\5.7\mingw53_32\mkspecs\features\lex.prf "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\RogueGame.pro" "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\res.qrc" C:\Qt\5.7\mingw53_32\lib\qtmaind.prl C:\Qt\5.7\mingw53_32\lib\Qt5Multimediad.prl C:\Qt\5.7\mingw53_32\lib\Qt5Widgetsd.prl C:\Qt\5.7\mingw53_32\lib\Qt5Guid.prl C:\Qt\5.7\mingw53_32\lib\Qt5Networkd.prl C:\Qt\5.7\mingw53_32\lib\Qt5Cored.prl  NO_PCH_SOURCES RESOURCES HEADERS SOURCES OBJECTIVE_SOURCES FORMS YACCSOURCES YACCSOURCES LEXSOURCES 
+	$(ZIP) RogueGame.zip $(SOURCES) $(DIST) "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\RogueGame.pro" C:\Qt\5.7\mingw53_32\mkspecs\features\spec_pre.prf C:\Qt\5.7\mingw53_32\mkspecs\qdevice.pri C:\Qt\5.7\mingw53_32\mkspecs\features\device_config.prf C:\Qt\5.7\mingw53_32\mkspecs\common\angle.conf C:\Qt\5.7\mingw53_32\mkspecs\qconfig.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dcore.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dcore_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dextras.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dextras_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dinput.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dinput_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dlogic.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dlogic_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dquick.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dquick_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dquickextras.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dquickextras_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dquickinput.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dquickinput_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dquickrender.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3dquickrender_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3drender.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_3drender_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_axbase.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_axbase_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_axcontainer.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_axcontainer_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_axserver.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_axserver_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_bluetooth.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_bluetooth_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_bootstrap_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_clucene_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_concurrent.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_concurrent_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_core.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_core_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_dbus.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_dbus_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_designer.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_designer_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_designercomponents_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_gamepad.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_gamepad_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_gui.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_gui_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_help.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_help_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_location.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_location_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_multimedia.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_multimedia_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_multimediawidgets.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_network.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_network_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_nfc.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_nfc_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_opengl.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_opengl_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_openglextensions.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_openglextensions_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_packetprotocol_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_platformsupport_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_positioning.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_positioning_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_printsupport.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_printsupport_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_purchasing.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_purchasing_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_qml.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_qml_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_qmldebug_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_qmldevtools_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_qmltest.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_qmltest_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_quick.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_quick_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_quickcontrols2.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_quickcontrols2_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_quickparticles_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_quicktemplates2_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_quickwidgets.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_quickwidgets_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_script.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_script_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_scripttools.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_scripttools_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_scxml.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_scxml_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_sensors.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_sensors_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_serialbus.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_serialbus_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_serialport.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_serialport_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_sql.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_sql_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_svg.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_svg_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_testlib.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_testlib_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_uiplugin.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_uitools.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_uitools_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_webchannel.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_webchannel_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_websockets.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_websockets_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_widgets.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_widgets_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_winextras.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_winextras_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_xml.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_xml_private.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_xmlpatterns.pri C:\Qt\5.7\mingw53_32\mkspecs\modules\qt_lib_xmlpatterns_private.pri C:\Qt\5.7\mingw53_32\mkspecs\features\qt_functions.prf C:\Qt\5.7\mingw53_32\mkspecs\features\qt_config.prf C:\Qt\5.7\mingw53_32\mkspecs\features\win32\qt_config.prf C:\Qt\5.7\mingw53_32\mkspecs\win32-g++\qmake.conf C:\Qt\5.7\mingw53_32\mkspecs\features\spec_post.prf .qmake.stash C:\Qt\5.7\mingw53_32\mkspecs\features\exclusive_builds.prf C:\Qt\5.7\mingw53_32\mkspecs\features\default_pre.prf C:\Qt\5.7\mingw53_32\mkspecs\features\win32\default_pre.prf C:\Qt\5.7\mingw53_32\mkspecs\features\resolve_config.prf C:\Qt\5.7\mingw53_32\mkspecs\features\exclusive_builds_post.prf C:\Qt\5.7\mingw53_32\mkspecs\features\default_post.prf C:\Qt\5.7\mingw53_32\mkspecs\features\build_pass.prf C:\Qt\5.7\mingw53_32\mkspecs\features\qml_debug.prf C:\Qt\5.7\mingw53_32\mkspecs\features\win32\rtti.prf C:\Qt\5.7\mingw53_32\mkspecs\features\precompile_header.prf C:\Qt\5.7\mingw53_32\mkspecs\features\warn_on.prf C:\Qt\5.7\mingw53_32\mkspecs\features\qt.prf C:\Qt\5.7\mingw53_32\mkspecs\features\resources.prf C:\Qt\5.7\mingw53_32\mkspecs\features\moc.prf C:\Qt\5.7\mingw53_32\mkspecs\features\win32\opengl.prf C:\Qt\5.7\mingw53_32\mkspecs\features\uic.prf C:\Qt\5.7\mingw53_32\mkspecs\features\file_copies.prf C:\Qt\5.7\mingw53_32\mkspecs\features\win32\windows.prf C:\Qt\5.7\mingw53_32\mkspecs\features\testcase_targets.prf C:\Qt\5.7\mingw53_32\mkspecs\features\exceptions.prf C:\Qt\5.7\mingw53_32\mkspecs\features\yacc.prf C:\Qt\5.7\mingw53_32\mkspecs\features\lex.prf "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\RogueGame.pro" "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\res.qrc" C:\Qt\5.7\mingw53_32\lib\qtmaind.prl C:\Qt\5.7\mingw53_32\lib\Qt5Multimediad.prl C:\Qt\5.7\mingw53_32\lib\Qt5Widgetsd.prl C:\Qt\5.7\mingw53_32\lib\Qt5Guid.prl C:\Qt\5.7\mingw53_32\lib\Qt5Networkd.prl C:\Qt\5.7\mingw53_32\lib\Qt5Cored.prl  NO_PCH_SOURCES RESOURCES HEADERS SOURCES OBJECTIVE_SOURCES FORMS YACCSOURCES YACCSOURCES LEXSOURCES 
 
 clean: compiler_clean 
-	-$(DEL_FILE) debug\main.o debug\bullet.o debug\enemy.o debug\game.o debug\health.o debug\score.o debug\player.o debug\enemyfood.o debug\foodbullet.o debug\enemybomb.o debug\bombbullet.o debug\enemydebt.o debug\debtbullet.o debug\coinblast.o debug\qrc_res.o debug\moc_bullet.o debug\moc_enemy.o debug\moc_player.o debug\moc_enemyfood.o debug\moc_foodbullet.o debug\moc_enemybomb.o debug\moc_bombbullet.o debug\moc_enemydebt.o debug\moc_debtbullet.o debug\moc_coinblast.o
+	-$(DEL_FILE) debug\main.o debug\bullet.o debug\enemy.o debug\game.o debug\health.o debug\score.o debug\enemyfood.o debug\foodbullet.o debug\enemybomb.o debug\bombbullet.o debug\enemydebt.o debug\debtbullet.o debug\coinblast.o debug\character.o debug\inv.o debug\item.o debug\pjock.o debug\player.o debug\qrc_res.o debug\moc_bullet.o debug\moc_enemy.o debug\moc_enemyfood.o debug\moc_foodbullet.o debug\moc_enemybomb.o debug\moc_bombbullet.o debug\moc_enemydebt.o debug\moc_debtbullet.o debug\moc_coinblast.o debug\moc_pjock.o
 
 distclean: clean 
 	-$(DEL_FILE) .qmake.stash
@@ -165,9 +181,9 @@ debug/qrc_res.cpp: ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/Ro
 		C:/Qt/5.7/mingw53_32/bin/rcc.exe
 	C:\Qt\5.7\mingw53_32\bin\rcc.exe -name res "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\res.qrc" -o debug\qrc_res.cpp
 
-compiler_moc_header_make_all: debug/moc_bullet.cpp debug/moc_enemy.cpp debug/moc_player.cpp debug/moc_enemyfood.cpp debug/moc_foodbullet.cpp debug/moc_enemybomb.cpp debug/moc_bombbullet.cpp debug/moc_enemydebt.cpp debug/moc_debtbullet.cpp debug/moc_coinblast.cpp
+compiler_moc_header_make_all: debug/moc_bullet.cpp debug/moc_enemy.cpp debug/moc_enemyfood.cpp debug/moc_foodbullet.cpp debug/moc_enemybomb.cpp debug/moc_bombbullet.cpp debug/moc_enemydebt.cpp debug/moc_debtbullet.cpp debug/moc_coinblast.cpp debug/moc_pjock.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) debug\moc_bullet.cpp debug\moc_enemy.cpp debug\moc_player.cpp debug\moc_enemyfood.cpp debug\moc_foodbullet.cpp debug\moc_enemybomb.cpp debug\moc_bombbullet.cpp debug\moc_enemydebt.cpp debug\moc_debtbullet.cpp debug\moc_coinblast.cpp
+	-$(DEL_FILE) debug\moc_bullet.cpp debug\moc_enemy.cpp debug\moc_enemyfood.cpp debug\moc_foodbullet.cpp debug\moc_enemybomb.cpp debug\moc_bombbullet.cpp debug\moc_enemydebt.cpp debug\moc_debtbullet.cpp debug\moc_coinblast.cpp debug\moc_pjock.cpp
 debug/moc_bullet.cpp: C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/qgraphicsitem.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/qglobal.h \
@@ -339,116 +355,12 @@ debug/moc_enemy.cpp: C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsRectItem \
 		C:/Qt/5.7/mingw53_32/include/QtGui/qtransform.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.7/mingw53_32/include/QtCore/QObject \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/character.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/inv.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/item.h \
 		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/enemy.h \
 		C:/Qt/5.7/mingw53_32/bin/moc.exe
 	C:\Qt\5.7\mingw53_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.7/mingw53_32/mkspecs/win32-g++ -I"C:/Users/Kauru99/Documents/School/RiversideCC/Programming/CIS17B_Rogue_Game/Character/Character GUI Files/RogueGame" -IC:/Qt/5.7/mingw53_32/include -IC:/Qt/5.7/mingw53_32/include/QtMultimedia -IC:/Qt/5.7/mingw53_32/include/QtWidgets -IC:/Qt/5.7/mingw53_32/include/QtGui -IC:/Qt/5.7/mingw53_32/include/QtANGLE -IC:/Qt/5.7/mingw53_32/include/QtNetwork -IC:/Qt/5.7/mingw53_32/include/QtCore -I. -IC:/Qt/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -IC:/Qt/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++ -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\enemy.h" -o debug\moc_enemy.cpp
-
-debug/moc_player.cpp: C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsPixmapItem \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qgraphicsitem.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qglobal.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qconfig.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qfeatures.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qsystemdetection.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qprocessordetection.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qcompilerdetection.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qtypeinfo.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qtypetraits.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qisenum.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qsysinfo.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qlogging.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qflags.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qatomic.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qbasicatomic.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qatomic_bootstrap.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qgenericatomic.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qatomic_cxx11.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qatomic_msvc.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qglobalstatic.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qmutex.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qnumeric.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qversiontagging.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qobject.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qobjectdefs.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qnamespace.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qobjectdefs_impl.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qstring.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qchar.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qbytearray.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qrefcount.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qarraydata.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qstringbuilder.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qlist.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qalgorithms.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qiterator.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qhashfunctions.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qpair.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qbytearraylist.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qstringlist.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qregexp.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qstringmatcher.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qcoreevent.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qscopedpointer.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qmetatype.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qvarlengtharray.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qcontainerfwd.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qobject_impl.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qvariant.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qmap.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qdebug.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qhash.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qtextstream.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qiodevice.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qlocale.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qshareddata.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qvector.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qpoint.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qset.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qcontiguouscache.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qsharedpointer.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qsharedpointer_impl.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qrect.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qmargins.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qsize.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qpainterpath.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qmatrix.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qpolygon.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qregion.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qwindowdefs.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qwindowdefs_win.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qdatastream.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qline.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qpixmap.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qpaintdevice.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qcolor.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qrgb.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qrgba64.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qimage.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qpixelformat.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qtransform.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/QObject \
-		C:/Qt/5.7/mingw53_32/include/QtMultimedia/QMediaPlayer \
-		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qmediaplayer.h \
-		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qmediaobject.h \
-		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qtmultimediadefs.h \
-		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qmultimedia.h \
-		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qmediacontent.h \
-		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qmediaresource.h \
-		C:/Qt/5.7/mingw53_32/include/QtNetwork/qnetworkrequest.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/QSharedDataPointer \
-		C:/Qt/5.7/mingw53_32/include/QtCore/QString \
-		C:/Qt/5.7/mingw53_32/include/QtCore/QUrl \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qurl.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qurlquery.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/QVariant \
-		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qmediaenumdebug.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qmetaobject.h \
-		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qaudio.h \
-		C:/Qt/5.7/mingw53_32/include/QtNetwork/qnetworkconfiguration.h \
-		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/enemy.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsRectItem \
-		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/player.h \
-		C:/Qt/5.7/mingw53_32/bin/moc.exe
-	C:\Qt\5.7\mingw53_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.7/mingw53_32/mkspecs/win32-g++ -I"C:/Users/Kauru99/Documents/School/RiversideCC/Programming/CIS17B_Rogue_Game/Character/Character GUI Files/RogueGame" -IC:/Qt/5.7/mingw53_32/include -IC:/Qt/5.7/mingw53_32/include/QtMultimedia -IC:/Qt/5.7/mingw53_32/include/QtWidgets -IC:/Qt/5.7/mingw53_32/include/QtGui -IC:/Qt/5.7/mingw53_32/include/QtANGLE -IC:/Qt/5.7/mingw53_32/include/QtNetwork -IC:/Qt/5.7/mingw53_32/include/QtCore -I. -IC:/Qt/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -IC:/Qt/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++ -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\player.h" -o debug\moc_player.cpp
 
 debug/moc_enemyfood.cpp: C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/qgraphicsitem.h \
@@ -533,6 +445,9 @@ debug/moc_enemyfood.cpp: C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsPixmapI
 		C:/Qt/5.7/mingw53_32/include/QtGui/qpixelformat.h \
 		C:/Qt/5.7/mingw53_32/include/QtGui/qtransform.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/QObject \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/character.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/inv.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/item.h \
 		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/enemyfood.h \
 		C:/Qt/5.7/mingw53_32/bin/moc.exe
 	C:\Qt\5.7\mingw53_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.7/mingw53_32/mkspecs/win32-g++ -I"C:/Users/Kauru99/Documents/School/RiversideCC/Programming/CIS17B_Rogue_Game/Character/Character GUI Files/RogueGame" -IC:/Qt/5.7/mingw53_32/include -IC:/Qt/5.7/mingw53_32/include/QtMultimedia -IC:/Qt/5.7/mingw53_32/include/QtWidgets -IC:/Qt/5.7/mingw53_32/include/QtGui -IC:/Qt/5.7/mingw53_32/include/QtANGLE -IC:/Qt/5.7/mingw53_32/include/QtNetwork -IC:/Qt/5.7/mingw53_32/include/QtCore -I. -IC:/Qt/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -IC:/Qt/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++ -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\enemyfood.h" -o debug\moc_enemyfood.cpp
@@ -707,6 +622,9 @@ debug/moc_enemybomb.cpp: C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsPixmapI
 		C:/Qt/5.7/mingw53_32/include/QtGui/qpixelformat.h \
 		C:/Qt/5.7/mingw53_32/include/QtGui/qtransform.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/QObject \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/character.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/inv.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/item.h \
 		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/enemybomb.h \
 		C:/Qt/5.7/mingw53_32/bin/moc.exe
 	C:\Qt\5.7\mingw53_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.7/mingw53_32/mkspecs/win32-g++ -I"C:/Users/Kauru99/Documents/School/RiversideCC/Programming/CIS17B_Rogue_Game/Character/Character GUI Files/RogueGame" -IC:/Qt/5.7/mingw53_32/include -IC:/Qt/5.7/mingw53_32/include/QtMultimedia -IC:/Qt/5.7/mingw53_32/include/QtWidgets -IC:/Qt/5.7/mingw53_32/include/QtGui -IC:/Qt/5.7/mingw53_32/include/QtANGLE -IC:/Qt/5.7/mingw53_32/include/QtNetwork -IC:/Qt/5.7/mingw53_32/include/QtCore -I. -IC:/Qt/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -IC:/Qt/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++ -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\enemybomb.h" -o debug\moc_enemybomb.cpp
@@ -881,6 +799,9 @@ debug/moc_enemydebt.cpp: C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsPixmapI
 		C:/Qt/5.7/mingw53_32/include/QtGui/qpixelformat.h \
 		C:/Qt/5.7/mingw53_32/include/QtGui/qtransform.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/QObject \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/character.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/inv.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/item.h \
 		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/enemydebt.h \
 		C:/Qt/5.7/mingw53_32/bin/moc.exe
 	C:\Qt\5.7\mingw53_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.7/mingw53_32/mkspecs/win32-g++ -I"C:/Users/Kauru99/Documents/School/RiversideCC/Programming/CIS17B_Rogue_Game/Character/Character GUI Files/RogueGame" -IC:/Qt/5.7/mingw53_32/include -IC:/Qt/5.7/mingw53_32/include/QtMultimedia -IC:/Qt/5.7/mingw53_32/include/QtWidgets -IC:/Qt/5.7/mingw53_32/include/QtGui -IC:/Qt/5.7/mingw53_32/include/QtANGLE -IC:/Qt/5.7/mingw53_32/include/QtNetwork -IC:/Qt/5.7/mingw53_32/include/QtCore -I. -IC:/Qt/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -IC:/Qt/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++ -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\enemydebt.h" -o debug\moc_enemydebt.cpp
@@ -1059,6 +980,118 @@ debug/moc_coinblast.cpp: C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsPixmapI
 		C:/Qt/5.7/mingw53_32/bin/moc.exe
 	C:\Qt\5.7\mingw53_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.7/mingw53_32/mkspecs/win32-g++ -I"C:/Users/Kauru99/Documents/School/RiversideCC/Programming/CIS17B_Rogue_Game/Character/Character GUI Files/RogueGame" -IC:/Qt/5.7/mingw53_32/include -IC:/Qt/5.7/mingw53_32/include/QtMultimedia -IC:/Qt/5.7/mingw53_32/include/QtWidgets -IC:/Qt/5.7/mingw53_32/include/QtGui -IC:/Qt/5.7/mingw53_32/include/QtANGLE -IC:/Qt/5.7/mingw53_32/include/QtNetwork -IC:/Qt/5.7/mingw53_32/include/QtCore -I. -IC:/Qt/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -IC:/Qt/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++ -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\coinblast.h" -o debug\moc_coinblast.cpp
 
+debug/moc_pjock.cpp: C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsPixmapItem \
+		C:/Qt/5.7/mingw53_32/include/QtWidgets/qgraphicsitem.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qglobal.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qconfig.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qfeatures.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qsystemdetection.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qprocessordetection.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qcompilerdetection.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qtypeinfo.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qtypetraits.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qisenum.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qsysinfo.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qlogging.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qflags.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qatomic.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qbasicatomic.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qatomic_bootstrap.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qgenericatomic.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qatomic_cxx11.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qatomic_msvc.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qglobalstatic.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qmutex.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qnumeric.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qversiontagging.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qobject.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qobjectdefs.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qnamespace.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qobjectdefs_impl.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qstring.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qchar.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qbytearray.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qrefcount.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qarraydata.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qstringbuilder.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qlist.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qalgorithms.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qiterator.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qhashfunctions.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qpair.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qbytearraylist.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qstringlist.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qregexp.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qstringmatcher.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qcoreevent.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qscopedpointer.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qmetatype.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qvarlengtharray.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qcontainerfwd.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qobject_impl.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qvariant.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qmap.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qdebug.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qhash.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qtextstream.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qiodevice.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qlocale.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qshareddata.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qvector.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qpoint.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qset.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qcontiguouscache.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qsharedpointer.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qsharedpointer_impl.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qrect.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qmargins.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qsize.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qpainterpath.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qmatrix.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qpolygon.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qregion.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qwindowdefs.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qwindowdefs_win.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qdatastream.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qline.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qpixmap.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qpaintdevice.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qcolor.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qrgb.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qrgba64.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qimage.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qpixelformat.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qtransform.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/QObject \
+		C:/Qt/5.7/mingw53_32/include/QtMultimedia/QMediaPlayer \
+		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qmediaplayer.h \
+		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qmediaobject.h \
+		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qtmultimediadefs.h \
+		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qmultimedia.h \
+		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qmediacontent.h \
+		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qmediaresource.h \
+		C:/Qt/5.7/mingw53_32/include/QtNetwork/qnetworkrequest.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/QSharedDataPointer \
+		C:/Qt/5.7/mingw53_32/include/QtCore/QString \
+		C:/Qt/5.7/mingw53_32/include/QtCore/QUrl \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qurl.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qurlquery.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/QVariant \
+		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qmediaenumdebug.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qmetaobject.h \
+		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qaudio.h \
+		C:/Qt/5.7/mingw53_32/include/QtNetwork/qnetworkconfiguration.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/QTimer \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qtimer.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qbasictimer.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/player.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/character.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/inv.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/item.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/pjock.h \
+		C:/Qt/5.7/mingw53_32/bin/moc.exe
+	C:\Qt\5.7\mingw53_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.7/mingw53_32/mkspecs/win32-g++ -I"C:/Users/Kauru99/Documents/School/RiversideCC/Programming/CIS17B_Rogue_Game/Character/Character GUI Files/RogueGame" -IC:/Qt/5.7/mingw53_32/include -IC:/Qt/5.7/mingw53_32/include/QtMultimedia -IC:/Qt/5.7/mingw53_32/include/QtWidgets -IC:/Qt/5.7/mingw53_32/include/QtGui -IC:/Qt/5.7/mingw53_32/include/QtANGLE -IC:/Qt/5.7/mingw53_32/include/QtNetwork -IC:/Qt/5.7/mingw53_32/include/QtCore -I. -IC:/Qt/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -IC:/Qt/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++ -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -IC:/Qt/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\pjock.h" -o debug\moc_pjock.cpp
+
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
 compiler_uic_make_all:
@@ -1210,12 +1243,14 @@ debug/main.o: ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGa
 		C:/Qt/5.7/mingw53_32/include/QtNetwork/qnetworkconfiguration.h \
 		C:/Qt/5.7/mingw53_32/include/QtGui/QImage \
 		C:/Qt/5.7/mingw53_32/include/QtGui/QBrush \
-		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/player.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/pjock.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/qgraphicsitem.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/QObject \
-		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/enemy.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsRectItem \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/player.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/character.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/inv.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/item.h \
 		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/score.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsTextItem \
 		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/health.h
@@ -1317,6 +1352,9 @@ debug/bullet.o: ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/Rogue
 		C:/Qt/5.7/mingw53_32/include/QtCore/QDebug \
 		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/enemy.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsRectItem \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/character.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/inv.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/item.h \
 		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/game.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsView \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/qgraphicsview.h \
@@ -1357,6 +1395,7 @@ debug/bullet.o: ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/Rogue
 		C:/Qt/5.7/mingw53_32/include/QtNetwork/qnetworkconfiguration.h \
 		C:/Qt/5.7/mingw53_32/include/QtGui/QImage \
 		C:/Qt/5.7/mingw53_32/include/QtGui/QBrush \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/pjock.h \
 		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/player.h \
 		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/score.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsTextItem \
@@ -1448,6 +1487,9 @@ debug/enemy.o: ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueG
 		C:/Qt/5.7/mingw53_32/include/QtGui/qtransform.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.7/mingw53_32/include/QtCore/QObject \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/character.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/inv.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/item.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/QTimer \
 		C:/Qt/5.7/mingw53_32/include/QtCore/qtimer.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/qbasictimer.h \
@@ -1498,6 +1540,7 @@ debug/enemy.o: ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueG
 		C:/Qt/5.7/mingw53_32/include/QtNetwork/qnetworkconfiguration.h \
 		C:/Qt/5.7/mingw53_32/include/QtGui/QImage \
 		C:/Qt/5.7/mingw53_32/include/QtGui/QBrush \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/pjock.h \
 		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/player.h \
 		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/score.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsTextItem \
@@ -1632,15 +1675,22 @@ debug/game.o: ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGa
 		C:/Qt/5.7/mingw53_32/include/QtNetwork/qnetworkconfiguration.h \
 		C:/Qt/5.7/mingw53_32/include/QtGui/QImage \
 		C:/Qt/5.7/mingw53_32/include/QtGui/QBrush \
-		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/player.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/pjock.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/qgraphicsitem.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/QObject \
-		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/enemy.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsRectItem \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/player.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/character.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/inv.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/item.h \
 		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/score.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsTextItem \
-		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/health.h
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/health.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/enemy.h \
+		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsRectItem \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/enemyfood.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/enemybomb.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/enemydebt.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\game.o "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\game.cpp"
 
 debug/health.o: ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/health.cpp ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/health.h \
@@ -1817,129 +1867,6 @@ debug/score.o: ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueG
 		C:/Qt/5.7/mingw53_32/include/QtGui/qfont.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\score.o "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\score.cpp"
 
-debug/player.o: ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/player.cpp ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/player.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsPixmapItem \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qgraphicsitem.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qglobal.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qconfig.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qfeatures.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qsystemdetection.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qprocessordetection.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qcompilerdetection.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qtypeinfo.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qtypetraits.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qisenum.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qsysinfo.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qlogging.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qflags.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qatomic.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qbasicatomic.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qatomic_bootstrap.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qgenericatomic.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qatomic_cxx11.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qatomic_msvc.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qglobalstatic.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qmutex.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qnumeric.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qversiontagging.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qobject.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qobjectdefs.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qnamespace.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qobjectdefs_impl.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qstring.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qchar.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qbytearray.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qrefcount.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qarraydata.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qstringbuilder.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qlist.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qalgorithms.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qiterator.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qhashfunctions.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qpair.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qbytearraylist.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qstringlist.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qregexp.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qstringmatcher.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qcoreevent.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qscopedpointer.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qmetatype.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qvarlengtharray.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qcontainerfwd.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qobject_impl.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qvariant.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qmap.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qdebug.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qhash.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qtextstream.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qiodevice.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qlocale.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qshareddata.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qvector.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qpoint.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qset.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qcontiguouscache.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qsharedpointer.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qsharedpointer_impl.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qrect.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qmargins.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qsize.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qpainterpath.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qmatrix.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qpolygon.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qregion.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qwindowdefs.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qwindowdefs_win.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qdatastream.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qline.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qpixmap.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qpaintdevice.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qcolor.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qrgb.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qrgba64.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qimage.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qpixelformat.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qtransform.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/QObject \
-		C:/Qt/5.7/mingw53_32/include/QtMultimedia/QMediaPlayer \
-		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qmediaplayer.h \
-		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qmediaobject.h \
-		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qtmultimediadefs.h \
-		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qmultimedia.h \
-		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qmediacontent.h \
-		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qmediaresource.h \
-		C:/Qt/5.7/mingw53_32/include/QtNetwork/qnetworkrequest.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/QSharedDataPointer \
-		C:/Qt/5.7/mingw53_32/include/QtCore/QString \
-		C:/Qt/5.7/mingw53_32/include/QtCore/QUrl \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qurl.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qurlquery.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/QVariant \
-		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qmediaenumdebug.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qmetaobject.h \
-		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qaudio.h \
-		C:/Qt/5.7/mingw53_32/include/QtNetwork/qnetworkconfiguration.h \
-		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/enemy.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsRectItem \
-		C:/Qt/5.7/mingw53_32/include/QtGui/QKeyEvent \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qevent.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qkeysequence.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qfile.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/qfiledevice.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qvector2d.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qtouchdevice.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsScene \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/qgraphicsscene.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qbrush.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qfont.h \
-		C:/Qt/5.7/mingw53_32/include/QtGui/qpen.h \
-		C:/Qt/5.7/mingw53_32/include/QtCore/QDebug \
-		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/bullet.h \
-		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/enemyfood.h \
-		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/enemybomb.h \
-		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/enemydebt.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\player.o "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\player.cpp"
-
 debug/enemyfood.o: ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/enemyfood.cpp ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/enemyfood.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsPixmapItem \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/qgraphicsitem.h \
@@ -2024,6 +1951,9 @@ debug/enemyfood.o: ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/Ro
 		C:/Qt/5.7/mingw53_32/include/QtGui/qpixelformat.h \
 		C:/Qt/5.7/mingw53_32/include/QtGui/qtransform.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/QObject \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/character.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/inv.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/item.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/QTimer \
 		C:/Qt/5.7/mingw53_32/include/QtCore/qtimer.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/qbasictimer.h \
@@ -2073,9 +2003,8 @@ debug/enemyfood.o: ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/Ro
 		C:/Qt/5.7/mingw53_32/include/QtNetwork/qnetworkconfiguration.h \
 		C:/Qt/5.7/mingw53_32/include/QtGui/QImage \
 		C:/Qt/5.7/mingw53_32/include/QtGui/QBrush \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/pjock.h \
 		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/player.h \
-		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/enemy.h \
-		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsRectItem \
 		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/score.h \
 		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsTextItem \
 		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/health.h \
@@ -2260,6 +2189,9 @@ debug/enemybomb.o: ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/Ro
 		C:/Qt/5.7/mingw53_32/include/QtGui/qpixelformat.h \
 		C:/Qt/5.7/mingw53_32/include/QtGui/qtransform.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/QObject \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/character.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/inv.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/item.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/QTimer \
 		C:/Qt/5.7/mingw53_32/include/QtCore/qtimer.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/qbasictimer.h \
@@ -2449,6 +2381,9 @@ debug/enemydebt.o: ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/Ro
 		C:/Qt/5.7/mingw53_32/include/QtGui/qpixelformat.h \
 		C:/Qt/5.7/mingw53_32/include/QtGui/qtransform.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/QObject \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/character.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/inv.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/item.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/QTimer \
 		C:/Qt/5.7/mingw53_32/include/QtCore/qtimer.h \
 		C:/Qt/5.7/mingw53_32/include/QtCore/qbasictimer.h \
@@ -2651,6 +2586,177 @@ debug/coinblast.o: ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/Ro
 		C:/Qt/5.7/mingw53_32/include/QtGui/qpen.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\coinblast.o "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\coinblast.cpp"
 
+debug/character.o: ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/character.cpp ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/character.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/inv.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/item.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\character.o "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\character.cpp"
+
+debug/inv.o: ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/inv.cpp ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/inv.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/item.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\inv.o "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\inv.cpp"
+
+debug/item.o: ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/item.cpp ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/item.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\item.o "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\item.cpp"
+
+debug/pjock.o: ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/pjock.cpp ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/pjock.h \
+		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsPixmapItem \
+		C:/Qt/5.7/mingw53_32/include/QtWidgets/qgraphicsitem.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qglobal.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qconfig.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qfeatures.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qsystemdetection.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qprocessordetection.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qcompilerdetection.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qtypeinfo.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qtypetraits.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qisenum.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qsysinfo.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qlogging.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qflags.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qatomic.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qbasicatomic.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qatomic_bootstrap.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qgenericatomic.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qatomic_cxx11.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qatomic_msvc.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qglobalstatic.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qmutex.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qnumeric.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qversiontagging.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qobject.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qobjectdefs.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qnamespace.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qobjectdefs_impl.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qstring.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qchar.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qbytearray.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qrefcount.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qarraydata.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qstringbuilder.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qlist.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qalgorithms.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qiterator.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qhashfunctions.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qpair.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qbytearraylist.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qstringlist.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qregexp.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qstringmatcher.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qcoreevent.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qscopedpointer.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qmetatype.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qvarlengtharray.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qcontainerfwd.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qobject_impl.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qvariant.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qmap.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qdebug.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qhash.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qtextstream.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qiodevice.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qlocale.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qshareddata.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qvector.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qpoint.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qset.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qcontiguouscache.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qsharedpointer.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qsharedpointer_impl.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qrect.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qmargins.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qsize.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qpainterpath.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qmatrix.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qpolygon.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qregion.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qwindowdefs.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qwindowdefs_win.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qdatastream.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qline.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qpixmap.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qpaintdevice.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qcolor.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qrgb.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qrgba64.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qimage.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qpixelformat.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qtransform.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/QObject \
+		C:/Qt/5.7/mingw53_32/include/QtMultimedia/QMediaPlayer \
+		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qmediaplayer.h \
+		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qmediaobject.h \
+		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qtmultimediadefs.h \
+		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qmultimedia.h \
+		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qmediacontent.h \
+		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qmediaresource.h \
+		C:/Qt/5.7/mingw53_32/include/QtNetwork/qnetworkrequest.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/QSharedDataPointer \
+		C:/Qt/5.7/mingw53_32/include/QtCore/QString \
+		C:/Qt/5.7/mingw53_32/include/QtCore/QUrl \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qurl.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qurlquery.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/QVariant \
+		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qmediaenumdebug.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qmetaobject.h \
+		C:/Qt/5.7/mingw53_32/include/QtMultimedia/qaudio.h \
+		C:/Qt/5.7/mingw53_32/include/QtNetwork/qnetworkconfiguration.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/QTimer \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qtimer.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qbasictimer.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/player.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/character.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/inv.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/item.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/QKeyEvent \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qevent.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qkeysequence.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qfile.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/qfiledevice.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qvector2d.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qtouchdevice.h \
+		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsScene \
+		C:/Qt/5.7/mingw53_32/include/QtWidgets/qgraphicsscene.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qbrush.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qfont.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qpen.h \
+		C:/Qt/5.7/mingw53_32/include/QtCore/QList \
+		C:/Qt/5.7/mingw53_32/include/QtCore/QDebug \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/bullet.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/coinblast.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/bombbullet.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/foodbullet.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/enemy.h \
+		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsRectItem \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/enemyfood.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/enemybomb.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/enemydebt.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/game.h \
+		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsView \
+		C:/Qt/5.7/mingw53_32/include/QtWidgets/qgraphicsview.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qpainter.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qtextoption.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qfontinfo.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qfontmetrics.h \
+		C:/Qt/5.7/mingw53_32/include/QtWidgets/qscrollarea.h \
+		C:/Qt/5.7/mingw53_32/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/5.7/mingw53_32/include/QtWidgets/qframe.h \
+		C:/Qt/5.7/mingw53_32/include/QtWidgets/qwidget.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qpalette.h \
+		C:/Qt/5.7/mingw53_32/include/QtWidgets/qsizepolicy.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/qcursor.h \
+		C:/Qt/5.7/mingw53_32/include/QtGui/QImage \
+		C:/Qt/5.7/mingw53_32/include/QtGui/QBrush \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/score.h \
+		C:/Qt/5.7/mingw53_32/include/QtWidgets/QGraphicsTextItem \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/health.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\pjock.o "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\pjock.cpp"
+
+debug/player.o: ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/player.cpp ../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/player.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/character.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/inv.h \
+		../../../CIS17B_Rogue_Game/Character/Character\ GUI\ Files/RogueGame/item.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\player.o "..\..\..\CIS17B_Rogue_Game\Character\Character GUI Files\RogueGame\player.cpp"
+
 debug/qrc_res.o: debug/qrc_res.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\qrc_res.o debug\qrc_res.cpp
 
@@ -2659,9 +2765,6 @@ debug/moc_bullet.o: debug/moc_bullet.cpp
 
 debug/moc_enemy.o: debug/moc_enemy.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\moc_enemy.o debug\moc_enemy.cpp
-
-debug/moc_player.o: debug/moc_player.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\moc_player.o debug\moc_player.cpp
 
 debug/moc_enemyfood.o: debug/moc_enemyfood.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\moc_enemyfood.o debug\moc_enemyfood.cpp
@@ -2683,6 +2786,9 @@ debug/moc_debtbullet.o: debug/moc_debtbullet.cpp
 
 debug/moc_coinblast.o: debug/moc_coinblast.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\moc_coinblast.o debug\moc_coinblast.cpp
+
+debug/moc_pjock.o: debug/moc_pjock.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\moc_pjock.o debug\moc_pjock.cpp
 
 ####### Install
 

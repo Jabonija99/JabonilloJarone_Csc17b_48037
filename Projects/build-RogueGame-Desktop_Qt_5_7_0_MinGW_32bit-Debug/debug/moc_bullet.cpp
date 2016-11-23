@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../RogueGame/bullet.h"
+#include "../../../../CIS17B_Rogue_Game/Character/Character GUI Files/RogueGame/bullet.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)

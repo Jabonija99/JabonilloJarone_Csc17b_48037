@@ -95,6 +95,8 @@ void *EnemyDebt::qt_metacast(const char *_clname)
         return static_cast<void*>(const_cast< EnemyDebt*>(this));
     if (!strcmp(_clname, "QGraphicsPixmapItem"))
         return static_cast< QGraphicsPixmapItem*>(const_cast< EnemyDebt*>(this));
+    if (!strcmp(_clname, "Character"))
+        return static_cast< Character*>(const_cast< EnemyDebt*>(this));
     return QObject::qt_metacast(_clname);
 }
 

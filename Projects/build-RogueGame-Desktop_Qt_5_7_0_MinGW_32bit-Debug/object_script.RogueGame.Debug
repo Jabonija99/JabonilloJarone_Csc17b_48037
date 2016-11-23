@@ -5,7 +5,6 @@ INPUT(
 ./debug\game.o
 ./debug\health.o
 ./debug\score.o
-./debug\player.o
 ./debug\enemyfood.o
 ./debug\foodbullet.o
 ./debug\enemybomb.o
@@ -13,10 +12,14 @@ INPUT(
 ./debug\enemydebt.o
 ./debug\debtbullet.o
 ./debug\coinblast.o
+./debug\character.o
+./debug\inv.o
+./debug\item.o
+./debug\pjock.o
+./debug\player.o
 ./debug\qrc_res.o
 ./debug\moc_bullet.o
 ./debug\moc_enemy.o
-./debug\moc_player.o
 ./debug\moc_enemyfood.o
 ./debug\moc_foodbullet.o
 ./debug\moc_enemybomb.o
@@ -24,4 +27,5 @@ INPUT(
 ./debug\moc_enemydebt.o
 ./debug\moc_debtbullet.o
 ./debug\moc_coinblast.o
+./debug\moc_pjock.o
 );

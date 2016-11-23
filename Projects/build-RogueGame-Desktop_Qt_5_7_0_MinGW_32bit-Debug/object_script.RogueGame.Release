@@ -5,7 +5,6 @@ INPUT(
 ./release\game.o
 ./release\health.o
 ./release\score.o
-./release\player.o
 ./release\enemyfood.o
 ./release\foodbullet.o
 ./release\enemybomb.o
@@ -13,10 +12,14 @@ INPUT(
 ./release\enemydebt.o
 ./release\debtbullet.o
 ./release\coinblast.o
+./release\character.o
+./release\inv.o
+./release\item.o
+./release\pjock.o
+./release\player.o
 ./release\qrc_res.o
 ./release\moc_bullet.o
 ./release\moc_enemy.o
-./release\moc_player.o
 ./release\moc_enemyfood.o
 ./release\moc_foodbullet.o
 ./release\moc_enemybomb.o
@@ -24,4 +27,5 @@ INPUT(
 ./release\moc_enemydebt.o
 ./release\moc_debtbullet.o
 ./release\moc_coinblast.o
+./release\moc_pjock.o
 );

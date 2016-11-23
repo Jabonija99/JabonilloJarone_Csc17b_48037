@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_Player_t {
     QByteArrayData data[3];
-    char stringdata0[14];
+    char stringdata0[23];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -30,11 +30,11 @@ struct qt_meta_stringdata_Player_t {
 static const qt_meta_stringdata_Player_t qt_meta_stringdata_Player = {
     {
 QT_MOC_LITERAL(0, 0, 6), // "Player"
-QT_MOC_LITERAL(1, 7, 5), // "spawn"
-QT_MOC_LITERAL(2, 13, 0) // ""
+QT_MOC_LITERAL(1, 7, 14), // "checkCollision"
+QT_MOC_LITERAL(2, 22, 0) // ""
 
     },
-    "Player\0spawn\0"
+    "Player\0checkCollision\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -66,7 +66,7 @@ void Player::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         Player *_t = static_cast<Player *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->spawn(); break;
+        case 0: _t->checkCollision(); break;
         default: ;
         }
     }
