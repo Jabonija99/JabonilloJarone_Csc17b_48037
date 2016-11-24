@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../RogueGame/enemy.h"
+#include "../../../../CIS17B_Rogue_Game/Character/Character GUI Files/RogueGame/enemy.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
@@ -95,6 +95,8 @@ void *Enemy::qt_metacast(const char *_clname)
         return static_cast<void*>(const_cast< Enemy*>(this));
     if (!strcmp(_clname, "QGraphicsPixmapItem"))
         return static_cast< QGraphicsPixmapItem*>(const_cast< Enemy*>(this));
+    if (!strcmp(_clname, "Character"))
+        return static_cast< Character*>(const_cast< Enemy*>(this));
     return QObject::qt_metacast(_clname);
 }
 
