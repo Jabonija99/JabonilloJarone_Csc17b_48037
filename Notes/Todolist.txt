@@ -1,0 +1,7 @@
+A gui version of the character code is uploaded into the github. I did some work on it to include enemies and attacks, but there are a few other things we need to complete the code.
+
+Jasmine, we need the player class to be updated with walking animations and attacks. If you can, would you be able to incorperate it into the project?
+
+Curt, the player class's inventory still needs the widget for the gut. Also, the items class needs to inherit the QGraphicsPixmapItem so that it can return an image when its placed into the inventory and be rendered to the scene when an enemy drops it.
+
+Michael, the enemies are about 75% completed with tracking and functions for health display and death still on the todo list. If you can code the tracking for the enemies we could split the work and finish the enemies.
