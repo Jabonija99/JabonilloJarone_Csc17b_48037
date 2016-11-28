@@ -22,13 +22,15 @@ Store::~Store(){
 }
 
 void Store::setItems(){
-
     item1 = new Item("tablet.txt");
     item2 = new Item("punchingbag.txt");
     item3 = new Item("hoop.txt");
 
+    btCart = new QPushButton(tr("Cart"));
+    btMore = new QPushButton(tr("More Info"));
+
     spOptions = new QSpacerItem(236,720);
-    spItems = new QSpacerItem();
+    spItems = new QSpacerItem(50,240);
 
     itemBox = new QScrollArea;
     itemBox->setWidget(mkGrp_Scroll());
@@ -41,7 +43,7 @@ void Store::setConnect(){
 
 void Store::layItems(){
     QHBoxLayout *mainLayout = new QHBoxLayout;
-    //mainLayout->addWidget(mkGrp_Options());
+    mainLayout->addWidget(mkGrp_Options());
     mainLayout->addWidget(itemBox);
 
     setLayout(mainLayout);
@@ -64,8 +66,14 @@ QGroupBox* Store::mkGrp_Scroll(){
 }
 
 QGroupBox* Store::mkGrp_Options(){
+    QGroupBox *groupbox = new QGroupBox;
 
+    QVBoxLayout* loMain = new QVBoxLayout;
+    loMain->addSpacerItem(spOptions);
 
+    groupbox->setLayout(loMain);
+
+    return groupbox;
 }
 
 QGroupBox* Store::mkGrp_Item(Item* item){
@@ -91,15 +99,22 @@ QGroupBox* Store::mkGrp_Item(Item* item){
     }
 
     //Set items onto layouts
-    QVBoxLayout *loRght = new QVBoxLayout;
-    loRght->addWidget(name);
-    loRght->addWidget(price);
-    loRght->addStretch(2);
+    QVBoxLayout *loLeft = new QVBoxLayout;
+    loLeft->addWidget(name);
+    loLeft->addWidget(price);
+    loLeft->addStretch(2);
+
+    QVBoxLayout *loRight = new QVBoxLayout;
+    loRight->addStretch(1);
+    loRight->addWidget(btMore);
+    loRight->addStretch(1);
 
     QHBoxLayout *loMain = new QHBoxLayout;
     loMain->addWidget(img);
-    loMain->addLayout(loRght);
-
+    loMain->addLayout(loLeft);
+    loMain->addSpacerItem(spItems);
+    loMain->addLayout(loRight);
+    loMain->addSpacerItem(spItems);
 
     groupbox->setLayout(loMain);
 

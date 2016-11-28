@@ -25,6 +25,8 @@ private:
     Item *item2;
     Item *item3;
 
+    QPushButton* btCart;
+    QPushButton* btMore;
 
     //Scroll Area for items
     QScrollArea *itemBox;
