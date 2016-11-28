@@ -9,7 +9,7 @@
 class QLabel;
 class QScrollArea;
 class QPushButton;
-class QGroupbox;
+class QGroupBox;
 class QSpacerItem;
 
 class Store :
@@ -21,20 +21,27 @@ private:
     void setConnect();
     void layItems();
 
-    //Vectors for item
-    std::vector<Item*> inv;
+    Item *item1;
+    Item *item2;
+    Item *item3;
 
-    QPushButton *btMore;
-    QPushButton *btAddCart;
 
+    //Scroll Area for items
     QScrollArea *itemBox;
-    QGroupbox *mkGrp_Cart();
-    QGroupbox *mkGrp_Scroll();
-    QGroupbox *mkGrp_Item(Item*);
+
+    //Groupboxes
+    QGroupBox *mkGrp_Scroll();
+    QGroupBox *mkGrp_Options();
+    QGroupBox *mkGrp_Item(Item*);
+
+    QSpacerItem *spOptions;
+    QSpacerItem *spItems;
 
 
 public:
+
     Store(QWidget *parent=0);
+    ~Store();
 
 public slots:
 signals:

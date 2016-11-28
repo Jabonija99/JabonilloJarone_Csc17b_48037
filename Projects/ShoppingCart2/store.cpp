@@ -1,6 +1,8 @@
 #include "store.h"
 #include <QtWidgets>
 
+#include <QDebug>
+
 
 const int SCREEN_HEIGHT = 740;
 const int SCREEN_WIDTH = 1024;
@@ -13,16 +15,94 @@ Store::Store(QWidget *parent):
     layItems();     //Render items
 }
 
-void Store::setItems(){
-    int index = 0;
-    inv[index++] = new Item("tablet.txt");
-    inv[index++] = new Item("punchingbag.txt");
-    inv[index++] = new Item("hoop.txt");
+Store::~Store(){
+    delete item1;
+    delete item2;
+    delete item3;
+}
 
-    btMore = new QPushButton("More Info");
-    btAddCart = new QPushButton("Add to Cart");
+void Store::setItems(){
+
+    item1 = new Item("tablet.txt");
+    item2 = new Item("punchingbag.txt");
+    item3 = new Item("hoop.txt");
+
+    spOptions = new QSpacerItem(236,720);
+    spItems = new QSpacerItem();
 
     itemBox = new QScrollArea;
     itemBox->setWidget(mkGrp_Scroll());
+}
+
+void Store::setConnect(){
+
+}
+
+
+void Store::layItems(){
+    QHBoxLayout *mainLayout = new QHBoxLayout;
+    //mainLayout->addWidget(mkGrp_Options());
+    mainLayout->addWidget(itemBox);
+
+    setLayout(mainLayout);
+
+    setFixedHeight(SCREEN_HEIGHT);
+    setFixedWidth(SCREEN_WIDTH);
+}
+
+QGroupBox* Store::mkGrp_Scroll(){
+    QGroupBox *groupbox = new QGroupBox();
+
+    QVBoxLayout *items = new QVBoxLayout;
+    items->addWidget(mkGrp_Item(item1));
+    items->addWidget(mkGrp_Item(item2));
+    items->addWidget(mkGrp_Item(item3));
+
+    groupbox->setLayout(items);
+
+    return groupbox;
+}
+
+QGroupBox* Store::mkGrp_Options(){
+
+
+}
+
+QGroupBox* Store::mkGrp_Item(Item* item){
+    //Groupbox for items
+    QGroupBox *groupbox = new QGroupBox;
+
+    //Create labels
+    QLabel *name = new QLabel(item->getName());
+    QLabel *price = new QLabel(item->getPrice());
+
+    //Load image
+    QLabel *img = new QLabel;
+
+    QPixmap pxImg(":imgs/deps/"+item->getImg());
+
+    //If image doesnt load
+    if(pxImg.isNull())
+        qDebug() <<"Pixmap is null!";
+    else{
+        //Scale and set image
+        pxImg = pxImg.scaled(240, 240, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+        img->setPixmap(pxImg);
+    }
+
+    //Set items onto layouts
+    QVBoxLayout *loRght = new QVBoxLayout;
+    loRght->addWidget(name);
+    loRght->addWidget(price);
+    loRght->addStretch(2);
+
+    QHBoxLayout *loMain = new QHBoxLayout;
+    loMain->addWidget(img);
+    loMain->addLayout(loRght);
+
+
+    groupbox->setLayout(loMain);
+
+    return groupbox;
 }
 

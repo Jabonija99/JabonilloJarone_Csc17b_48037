@@ -6,7 +6,6 @@
 class Item
 {
 private:
-    QString filename;
     QString img;
     QString name;
     QString price;

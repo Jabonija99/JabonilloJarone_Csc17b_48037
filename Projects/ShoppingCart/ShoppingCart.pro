@@ -17,15 +17,13 @@ SOURCES += main.cpp\
     shop.cpp \
     item.cpp \
     cart.cpp \
-    checkout.cpp \
-    items.cpp
+    checkout.cpp
 
 HEADERS  += mainwindow.h \
     shop.h \
     item.h \
     cart.h \
-    checkout.h \
-    items.h
+    checkout.h
 
 DISTFILES +=
 

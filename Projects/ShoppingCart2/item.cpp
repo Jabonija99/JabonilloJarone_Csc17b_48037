@@ -5,7 +5,6 @@
 
 Item::Item()
 {
-    filename="";
     img="";
     name="";
     price="";
@@ -15,7 +14,7 @@ Item::Item()
 
 Item::Item(QString filename)
 {
-    if(load(filename)){
+    if(!load(filename)){
         qDebug() <<"File failed to open" <<filename <<" !\n";
     }
 }
