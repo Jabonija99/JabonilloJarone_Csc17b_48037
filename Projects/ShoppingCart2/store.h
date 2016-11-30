@@ -27,6 +27,7 @@ private:
 
     QPushButton* btCart;
     QPushButton* btMore;
+    std::vector<QPushButton*> buttons;
 
     //Scroll Area for items
     QScrollArea *itemBox;
@@ -34,7 +35,7 @@ private:
     //Groupboxes
     QGroupBox *mkGrp_Scroll();
     QGroupBox *mkGrp_Options();
-    QGroupBox *mkGrp_Item(Item*);
+    QGroupBox *mkGrp_Item(Item*, int);
 
     QSpacerItem *spOptions;
     QSpacerItem *spItems;

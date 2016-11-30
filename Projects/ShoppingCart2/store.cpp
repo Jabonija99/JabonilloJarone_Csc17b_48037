@@ -27,10 +27,18 @@ void Store::setItems(){
     item3 = new Item("hoop.txt");
 
     btCart = new QPushButton(tr("Cart"));
+    btCart->setFixedHeight(30);
+
     btMore = new QPushButton(tr("More Info"));
+    for(int i = 0; i < 3; i++){
+        buttons.push_back(new QPushButton(tr("MoreInfo")));
+        buttons[i]->setFixedHeight(30);
+        buttons[i]->setFixedWidth(130);
+    }
+
 
     spOptions = new QSpacerItem(236,720);
-    spItems = new QSpacerItem(50,240);
+    spItems = new QSpacerItem(60,180);
 
     itemBox = new QScrollArea;
     itemBox->setWidget(mkGrp_Scroll());
@@ -56,9 +64,9 @@ QGroupBox* Store::mkGrp_Scroll(){
     QGroupBox *groupbox = new QGroupBox();
 
     QVBoxLayout *items = new QVBoxLayout;
-    items->addWidget(mkGrp_Item(item1));
-    items->addWidget(mkGrp_Item(item2));
-    items->addWidget(mkGrp_Item(item3));
+    items->addWidget(mkGrp_Item(item1,0));
+    items->addWidget(mkGrp_Item(item2,1));
+    items->addWidget(mkGrp_Item(item3,2));
 
     groupbox->setLayout(items);
 
@@ -69,6 +77,7 @@ QGroupBox* Store::mkGrp_Options(){
     QGroupBox *groupbox = new QGroupBox;
 
     QVBoxLayout* loMain = new QVBoxLayout;
+    loMain->addWidget(btCart);
     loMain->addSpacerItem(spOptions);
 
     groupbox->setLayout(loMain);
@@ -76,7 +85,7 @@ QGroupBox* Store::mkGrp_Options(){
     return groupbox;
 }
 
-QGroupBox* Store::mkGrp_Item(Item* item){
+QGroupBox* Store::mkGrp_Item(Item* item,int slot){
     //Groupbox for items
     QGroupBox *groupbox = new QGroupBox;
 
@@ -106,7 +115,7 @@ QGroupBox* Store::mkGrp_Item(Item* item){
 
     QVBoxLayout *loRight = new QVBoxLayout;
     loRight->addStretch(1);
-    loRight->addWidget(btMore);
+    loRight->addWidget(buttons[slot]);
     loRight->addStretch(1);
 
     QHBoxLayout *loMain = new QHBoxLayout;
