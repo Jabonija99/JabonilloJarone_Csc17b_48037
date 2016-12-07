@@ -23,8 +23,11 @@ bool Item::load(QString filename){
     //Create bool for errors
     bool error = true;
 
+    itemfile = filename;
+
+
     //Open file
-    QFile file(":/items/inv/"+filename);
+    QFile file(":/items/inv/"+itemfile);
     if(!file.open(QIODevice::ReadOnly|QIODevice::Text)){
         error = false;
     }

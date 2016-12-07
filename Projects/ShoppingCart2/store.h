@@ -42,13 +42,16 @@ private:
 
 
 public:
-
     Store(QWidget *parent=0);
     ~Store();
 
 public slots:
-signals:
+    void loadItem1();
+    void loadItem2();
+    void loadItem3();
 
+signals:
+    void sendItem(Item* item);
 
 };
 

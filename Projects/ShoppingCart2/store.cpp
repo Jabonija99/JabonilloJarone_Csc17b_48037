@@ -16,8 +16,13 @@ Store::Store(QWidget *parent):
 }
 
 Store::~Store(){
+    item1 = NULL;
     delete item1;
+
+    item2 = NULL;
     delete item2;
+
+    item3 = NULL;
     delete item3;
 }
 
@@ -45,7 +50,12 @@ void Store::setItems(){
 }
 
 void Store::setConnect(){
-
+    connect(buttons.at(0), SIGNAL(clicked()),
+            this, SLOT(loadItem1()));
+    connect(buttons.at(1), SIGNAL(clicked()),
+            this, SLOT(loadItem2()));
+    connect(buttons.at(2), SIGNAL(clicked()),
+            this, SLOT(loadItem3()));
 }
 
 
@@ -128,5 +138,17 @@ QGroupBox* Store::mkGrp_Item(Item* item,int slot){
     groupbox->setLayout(loMain);
 
     return groupbox;
+}
+
+void Store::loadItem1(){
+    emit sendItem(item1);
+}
+
+void Store::loadItem2(){
+    emit sendItem(item2);
+}
+
+void Store::loadItem3(){
+    emit sendItem(item3);
 }
 

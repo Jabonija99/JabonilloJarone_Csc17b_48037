@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "store.h"
+#include "info.h"
 
 class QStackedWidget;
 class QPushButton;
@@ -19,6 +20,7 @@ private:
     void createStatusBar();
 
     Store *store;
+    Info *infoscreen;
 
     //Menu buttons
     QMenu *fileMenu;

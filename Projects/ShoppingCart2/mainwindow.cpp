@@ -11,9 +11,11 @@ MainWindow::MainWindow(QWidget *parent)
 
     //create items
     store = new Store();
+    infoscreen = new Info();
 
     stkWidget = new QStackedWidget;
     stkWidget->addWidget(store);
+    stkWidget->addWidget(infoscreen);
 
     setCentralWidget(stkWidget);
 
@@ -29,7 +31,8 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {
-
+    store = NULL;
+    delete store;
 }
 
 
@@ -40,12 +43,12 @@ void MainWindow::createActions(){
 
     connect(actQuit, SIGNAL(triggered()),
             this, SLOT(close()));
-
     connect(btNext,SIGNAL(clicked()),
             this, SLOT(nextWindow()));
     connect(btPrev,SIGNAL(clicked()),
             this, SLOT(prevWindow()));
-
+    connect(store,SIGNAL(sendItem(Item*)),
+            infoscreen,SLOT(load(Item*)));
 }
 
 void MainWindow::createMenus(){
@@ -55,7 +58,6 @@ void MainWindow::createMenus(){
 
     helpMenu = menuBar()->addMenu(tr("Help"));
     helpMenu->addAction(actInfo);
-
 }
 
 void MainWindow::createContextMenu(){

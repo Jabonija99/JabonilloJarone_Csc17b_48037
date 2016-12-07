@@ -11,6 +11,7 @@ private:
     QString price;
     QString ship;
     QString desc;
+    QString itemfile;
 
 public:
     Item();
@@ -24,6 +25,7 @@ public:
     QString getPrice(){return price;}
     QString getShip(){return ship;}
     QString getDesc(){return desc;}
+    QString getfile(){return itemfile;}
 };
 
 #endif // ITEM_H
