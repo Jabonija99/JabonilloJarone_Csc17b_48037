@@ -50,6 +50,20 @@ void Cart::setConnect(){
             this, SLOT(goBack()));
     connect(btCheck, SIGNAL(clicked()),
             this, SLOT(goNext()));
+
+    connect(btnRemove[0],SIGNAL(clicked()),
+                this,SLOT(rem1()));
+    connect(btnRemove[1],SIGNAL(clicked()),
+                this,SLOT(rem2()));
+    connect(btnRemove[2],SIGNAL(clicked()),
+                this,SLOT(rem3()));
+
+
+
+    connect(this, SIGNAL(toRemove(int)),
+            this, SLOT(remItem(int)));
+
+
 }
 
 void Cart::layItems(){
@@ -96,17 +110,14 @@ QGroupBox* Cart::mkGrp_Item(Item* item,int slot){
 
     //Create labels
     lbNames[slot]->setText(item->getName());
-    QLabel *price = new QLabel(item->getPrice());
 
     //Load image
     //QLabel *img = new QLabel;
 
     QPixmap pxImg(":imgs/deps/"+item->getImg());
 
-    //If image doesnt load
-    if(pxImg.isNull())
-        qDebug() <<"Pixmap is null!";
-    else{
+    //If image loads
+    if(!pxImg.isNull()){
         //Scale and set image
         pxImg = pxImg.scaled(240, 240, Qt::KeepAspectRatio, Qt::SmoothTransformation);
         lbImgs[slot]->setPixmap(pxImg);
@@ -115,7 +126,6 @@ QGroupBox* Cart::mkGrp_Item(Item* item,int slot){
     //Set items onto layouts
     QVBoxLayout *loLeft = new QVBoxLayout;
     loLeft->addWidget(lbNames[slot]);
-    loLeft->addWidget(price);
     loLeft->addStretch(2);
 
     QVBoxLayout *loRight = new QVBoxLayout;
@@ -157,9 +167,23 @@ void Cart::add(Item* item){
             lbImgs[itemNum]->setPixmap(pxImg);
         }
 
-
         itemNum++;
     }
+}
+
+void Cart::remItem(int slot){
+    delete items[slot];
+    lbNames[slot]->setText("");
+    QPixmap pxImg;
+    lbImgs[slot]->setPixmap(pxImg);
+
+    for(int i = slot; i < items.size()-1; i++){
+        items[i] = items[i+1];
+        lbNames[i] = lbNames[i+1];
+        lbImgs[i] = lbImgs[i+1];
+    }
+
+    itemNum--;
 }
 
 void Cart::goNext(){
@@ -170,4 +194,15 @@ void Cart::goBack(){
     emit toShop();
 }
 
+void Cart::rem1(){
+    emit toRemove(0);
+}
+
+void Cart::rem2(){
+    emit toRemove(0);
+}
+
+void Cart::rem3(){
+    emit toRemove(0);
+}
 

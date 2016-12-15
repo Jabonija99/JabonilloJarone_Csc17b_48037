@@ -1,0 +1,16 @@
+INPUT(
+./release/main.o
+./release/mainwindow.o
+./release/login.o
+./release/question1.o
+./release/question2.o
+./release/question3.o
+./release/complete.o
+./release/qrc_res.o
+./release/moc_mainwindow.o
+./release/moc_login.o
+./release/moc_question1.o
+./release/moc_question2.o
+./release/moc_question3.o
+./release/moc_complete.o
+);

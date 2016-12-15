@@ -22,8 +22,8 @@ void Info::setItems(){
     item = new Item();
 
     name = new QLabel(tr("<b>Name:</b> ") + item->getName());
-    price = new QLabel(tr("<b>Price:</b> ") + item->getPrice());
-    ship = new QLabel(tr("<b>Shipping:</b> ") + item->getShip());
+    price = new QLabel(tr("<b>Price: $</b> ") + item->getPrice());
+    ship = new QLabel(tr("<b>Shipping: $</b> ") + item->getShip());
     desc = new QLabel(tr("<b>Description:</b>\n")+item->getDesc());
 
     img = new QLabel;
@@ -67,8 +67,8 @@ void Info::load(Item* shopItem){
         */
 
         name->setText(tr("<b>Name:</b> ")+ item->getName());
-        price->setText(tr("<b>Price:</b> ")+ item->getPrice());
-        ship->setText(tr("<b>Shipping:</b> ")+ item->getShip());
+        price->setText(tr("<b>Price: $</b> ")+ item->getPrice());
+        ship->setText(tr("<b>Shipping: $</b> ")+ item->getShip());
         desc->setText(tr("<b>Description:</b>\n")+ item->getDesc());
 
         //Load image

@@ -1,0 +1,16 @@
+INPUT(
+./debug/main.o
+./debug/mainwindow.o
+./debug/login.o
+./debug/question1.o
+./debug/question2.o
+./debug/question3.o
+./debug/complete.o
+./debug/qrc_res.o
+./debug/moc_mainwindow.o
+./debug/moc_login.o
+./debug/moc_question1.o
+./debug/moc_question2.o
+./debug/moc_question3.o
+./debug/moc_complete.o
+);

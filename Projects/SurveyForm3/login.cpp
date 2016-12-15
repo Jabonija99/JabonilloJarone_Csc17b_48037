@@ -37,7 +37,9 @@ void Login::setItems(){
 
 void Login::setConnect(){
     connect(btQuit, SIGNAL(clicked()),
-            this, SLOT(close()));
+            this, SLOT(goExit()));
+    connect(btLogin, SIGNAL(clicked()),
+            this, SLOT(goSurvey()));
 
 }
 
@@ -100,4 +102,12 @@ void Login::layItems(){
     setWindowTitle(tr("Survey - Login"));
     setFixedHeight(SCREEN_HEIGHT);
     setFixedWidth(SCREEN_WIDTH);
+}
+
+void Login::goSurvey(){
+    emit toSurvey();
+}
+
+void Login::goExit(){
+    emit toExit();
 }

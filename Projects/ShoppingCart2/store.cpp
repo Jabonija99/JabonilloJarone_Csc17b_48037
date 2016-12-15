@@ -103,7 +103,7 @@ QGroupBox* Store::mkGrp_Item(Item* item,int slot){
 
     //Create labels
     QLabel *name = new QLabel(item->getName());
-    QLabel *price = new QLabel(item->getPrice());
+    QLabel *price = new QLabel(tr("$")+item->getPrice());
 
     //Load image
     QLabel *img = new QLabel;

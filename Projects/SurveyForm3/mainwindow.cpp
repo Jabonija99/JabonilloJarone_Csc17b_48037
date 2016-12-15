@@ -35,6 +35,10 @@ MainWindow::MainWindow()
 
     connect(window5,SIGNAL(toExit()),
             this, SLOT(close()));
+    connect(window1, SIGNAL(toSurvey()),
+            this, SLOT(nextWindow()));
+    connect(window1, SIGNAL(toExit()),
+            this, SLOT(close()));
 }
 
 void MainWindow::setPg(int page){
@@ -67,15 +71,11 @@ void MainWindow::prevWindow(){
 
 void MainWindow::updateStatusbar(){
 
-    if(pg <1)
-        btPrev->setEnabled(false);
-    else
-        btPrev->setEnabled(true);
-
-    if(pg>3)
+    if(pg < 1 || pg >3)
         btNext->setEnabled(false);
     else
         btNext->setEnabled(true);
+
 
 }
 
@@ -113,7 +113,7 @@ void MainWindow::createToolBars(){
 }
 
 void MainWindow::createStatusBar(){
-    statusBar()->addWidget(btPrev,3);
+    //statusBar()->addWidget(btPrev,3);
     statusBar()->addWidget(btNext,3);
 
     updateStatusbar();

@@ -42,6 +42,15 @@ private:
 
 public:
     Login(QWidget *parent = 0);
+
+public slots:
+    void goSurvey();
+    void goExit();
+
+signals:
+    void toSurvey();
+    void toExit();
+
 };
 
 #endif // LOGIN_H

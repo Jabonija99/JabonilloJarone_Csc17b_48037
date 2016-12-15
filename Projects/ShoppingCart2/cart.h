@@ -27,6 +27,7 @@ private:
     std::vector<QPushButton*> btnRemove;
     std::vector<QLabel*> lbNames;
     std::vector<QLabel*> lbImgs;
+    std::vector<QLabel*> lbPrice;
 
     QPushButton* btShop;
     QPushButton* btCheck;
@@ -53,10 +54,16 @@ public slots:
     void add(Item*);
     void goNext();
     void goBack();
+    void remItem(int);
+
+    void rem1();
+    void rem2();
+    void rem3();
 
 signals:
     void toCheck();
     void toShop();
+    void toRemove(int);
 };
 
 #endif // CART_H

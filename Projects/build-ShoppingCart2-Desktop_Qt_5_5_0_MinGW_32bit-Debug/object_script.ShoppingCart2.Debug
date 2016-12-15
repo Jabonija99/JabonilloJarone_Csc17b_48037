@@ -1,0 +1,17 @@
+INPUT(
+./debug/main.o
+./debug/mainwindow.o
+./debug/item.o
+./debug/store.o
+./debug/info.o
+./debug/cart.o
+./debug/checkout.o
+./debug/complete.o
+./debug/qrc_res.o
+./debug/moc_mainwindow.o
+./debug/moc_store.o
+./debug/moc_info.o
+./debug/moc_cart.o
+./debug/moc_checkout.o
+./debug/moc_complete.o
+);

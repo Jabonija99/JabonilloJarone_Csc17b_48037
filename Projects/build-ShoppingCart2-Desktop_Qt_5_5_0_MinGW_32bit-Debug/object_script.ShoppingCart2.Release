@@ -1,0 +1,17 @@
+INPUT(
+./release/main.o
+./release/mainwindow.o
+./release/item.o
+./release/store.o
+./release/info.o
+./release/cart.o
+./release/checkout.o
+./release/complete.o
+./release/qrc_res.o
+./release/moc_mainwindow.o
+./release/moc_store.o
+./release/moc_info.o
+./release/moc_cart.o
+./release/moc_checkout.o
+./release/moc_complete.o
+);
