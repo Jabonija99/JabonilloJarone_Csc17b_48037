@@ -56,6 +56,8 @@ void Store::setConnect(){
             this, SLOT(loadItem2()));
     connect(buttons.at(2), SIGNAL(clicked()),
             this, SLOT(loadItem3()));
+    connect(btCart, SIGNAL(clicked()),
+            this, SLOT(goCart()));
 }
 
 
@@ -142,13 +144,19 @@ QGroupBox* Store::mkGrp_Item(Item* item,int slot){
 
 void Store::loadItem1(){
     emit sendItem(item1);
+    emit toInfo();
 }
 
 void Store::loadItem2(){
     emit sendItem(item2);
+    emit toInfo();
 }
 
 void Store::loadItem3(){
     emit sendItem(item3);
+    emit toInfo();
 }
 
+void Store::goCart(){
+    emit toCart();
+}

@@ -49,9 +49,12 @@ public slots:
     void loadItem1();
     void loadItem2();
     void loadItem3();
+    void goCart();
 
 signals:
     void sendItem(Item* item);
+    void toInfo();
+    void toCart();
 
 };
 

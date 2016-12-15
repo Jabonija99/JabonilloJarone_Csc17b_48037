@@ -12,10 +12,16 @@ MainWindow::MainWindow(QWidget *parent)
     //create items
     store = new Store();
     infoscreen = new Info();
+    cart = new Cart();
+    checkout = new Checkout();
+    complete = new Complete();
 
     stkWidget = new QStackedWidget;
     stkWidget->addWidget(store);
     stkWidget->addWidget(infoscreen);
+    stkWidget->addWidget(cart);
+    stkWidget->addWidget(checkout);
+    stkWidget->addWidget(complete);
 
     setCentralWidget(stkWidget);
 
@@ -31,7 +37,10 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {
-    store = NULL;
+    delete infoscreen;
+    delete cart;
+    delete checkout;
+    delete complete;
     delete store;
 }
 
@@ -49,6 +58,39 @@ void MainWindow::createActions(){
             this, SLOT(prevWindow()));
     connect(store,SIGNAL(sendItem(Item*)),
             infoscreen,SLOT(load(Item*)));
+
+    connect(infoscreen, SIGNAL(sendItem(Item*)),
+            cart, SLOT(add(Item*)));
+
+    connect(store,SIGNAL(toInfo()),
+            this, SLOT(nextWindow()));
+    connect(store,SIGNAL(toCart()),
+            this,SLOT(pgcart()));
+
+    connect(infoscreen,SIGNAL(toCart()),
+            this,SLOT(nextWindow()));
+    connect(infoscreen,SIGNAL(toShop()),
+            this,SLOT(prevWindow()));
+
+    connect(cart, SIGNAL(toShop()),
+            this, SLOT(shop()));
+    connect(cart, SIGNAL(toCheck()),
+            this, SLOT(nextWindow()));
+
+    connect(checkout, SIGNAL(toShop()),
+            this, SLOT(shop()));
+    connect(checkout, SIGNAL(toFinish()),
+            this, SLOT(nextWindow()));
+    connect(checkout, SIGNAL(toCart()),
+            this, SLOT(prevWindow()));
+
+    connect(complete,SIGNAL(toExit()),
+            this, SLOT(close()));
+    connect(complete,SIGNAL(toShop()),
+            this,SLOT(shop()));
+
+
+
 }
 
 void MainWindow::createMenus(){
@@ -70,15 +112,15 @@ void MainWindow::createToolBars(){
 }
 
 void MainWindow::createStatusBar(){
-    statusBar()->addWidget(btPrev,3);
-    statusBar()->addWidget(btNext,3);
+    //statusBar()->addWidget(btPrev,3);
+    //statusBar()->addWidget(btNext,3);
 
     updateStatusbar();
 }
 
 void MainWindow::setPg(int page){
-    if(page > 3)
-        pg = 3;
+    if(page > 4)
+        pg = 4;
     else if(page < 0)
         pg = 0;
     else
@@ -104,6 +146,21 @@ void MainWindow::prevWindow(){
     updateStatusbar();
 }
 
+void MainWindow::shop(){
+    pg=0;
+
+    stkWidget->setCurrentIndex(pg);
+
+    updateStatusbar();
+}
+
+void MainWindow::pgcart(){
+    pg=2;
+
+    stkWidget->setCurrentIndex(pg);
+
+    updateStatusbar();
+}
 
 void MainWindow::updateStatusbar(){
 
@@ -112,7 +169,7 @@ void MainWindow::updateStatusbar(){
     else
         btPrev->setEnabled(true);
 
-    if(pg>2)
+    if(pg>3)
         btNext->setEnabled(false);
     else
         btNext->setEnabled(true);

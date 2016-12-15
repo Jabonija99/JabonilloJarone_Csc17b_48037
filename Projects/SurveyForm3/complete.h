@@ -10,6 +10,7 @@ class QSpacerItem;
 
 class Complete : public QDialog
 {
+    Q_OBJECT
 private:
     void setItems();
     void setConnect();
@@ -26,6 +27,12 @@ private:
 
 public:
     Complete(QWidget *parent = 0);
+
+public slots:
+    void goExit();
+
+signals:
+    void toExit();
 };
 
 #endif // COMPLETE_H

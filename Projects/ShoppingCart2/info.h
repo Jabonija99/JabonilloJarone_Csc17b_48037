@@ -38,6 +38,13 @@ public:
 
 public slots:
     void load(Item *shopItem);
+    void loadItem();
+    void goBack();
+
+signals:
+    void sendItem(Item*);
+    void toShop();
+    void toCart();
 };
 
 #endif // INFO_H

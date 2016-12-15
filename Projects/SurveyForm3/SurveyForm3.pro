@@ -27,3 +27,6 @@ HEADERS  += \
     question2.h \
     question3.h \
     complete.h
+
+RESOURCES += \
+    res.qrc

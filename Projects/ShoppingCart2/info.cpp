@@ -21,10 +21,10 @@ Info::~Info(){
 void Info::setItems(){
     item = new Item();
 
-    name = new QLabel(item->getName());
-    price = new QLabel(item->getPrice());
-    ship = new QLabel(item->getShip());
-    desc = new QLabel(item->getDesc());
+    name = new QLabel(tr("<b>Name:</b> ") + item->getName());
+    price = new QLabel(tr("<b>Price:</b> ") + item->getPrice());
+    ship = new QLabel(tr("<b>Shipping:</b> ") + item->getShip());
+    desc = new QLabel(tr("<b>Description:</b>\n")+item->getDesc());
 
     img = new QLabel;
 
@@ -33,7 +33,10 @@ void Info::setItems(){
 }
 
 void Info::setConnect(){
-
+    connect(btCart, SIGNAL(clicked()),
+            this, SLOT(loadItem()));
+    connect(btShop, SIGNAL(clicked()),
+            this, SLOT(goBack()));
 }
 
 void Info::layItems(){
@@ -63,10 +66,10 @@ void Info::load(Item* shopItem){
         desc = new QLabel(item->getDesc());
         */
 
-        name->setText(item->getName());
-        price->setText(item->getPrice());
-        ship->setText(item->getShip());
-        desc->setText(item->getDesc());
+        name->setText(tr("<b>Name:</b> ")+ item->getName());
+        price->setText(tr("<b>Price:</b> ")+ item->getPrice());
+        ship->setText(tr("<b>Shipping:</b> ")+ item->getShip());
+        desc->setText(tr("<b>Description:</b>\n")+ item->getDesc());
 
         //Load image
         //img = new QLabel;
@@ -119,4 +122,13 @@ QGroupBox* Info::mkGrp_Info(){
     groupbox->setLayout(loMain);
 
     return groupbox;
+}
+
+void Info::loadItem(){
+    emit sendItem(item);
+    emit toCart();
+}
+
+void Info::goBack(){
+    emit toShop();
 }

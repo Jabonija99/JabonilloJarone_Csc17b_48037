@@ -16,12 +16,18 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     item.cpp \
     store.cpp \
-    info.cpp
+    info.cpp \
+    cart.cpp \
+    checkout.cpp \
+    complete.cpp
 
 HEADERS  += mainwindow.h \
     item.h \
     store.h \
-    info.h
+    info.h \
+    cart.h \
+    checkout.h \
+    complete.h
 
 RESOURCES += \
     res.qrc

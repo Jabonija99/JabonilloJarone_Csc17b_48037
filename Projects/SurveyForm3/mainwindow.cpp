@@ -31,6 +31,10 @@ MainWindow::MainWindow()
     createContextMenu();
     createToolBars();
     createStatusBar();
+
+
+    connect(window5,SIGNAL(toExit()),
+            this, SLOT(close()));
 }
 
 void MainWindow::setPg(int page){

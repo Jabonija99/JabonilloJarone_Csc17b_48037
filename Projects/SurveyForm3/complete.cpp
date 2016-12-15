@@ -25,7 +25,7 @@ void Complete::setItems(){
 
 void Complete::setConnect(){
     connect(btExit, SIGNAL(clicked()),
-            this, SLOT(close()));
+            this, SLOT(goExit()));
 }
 
 void Complete::layItems(){
@@ -54,4 +54,8 @@ void Complete::layItems(){
     setWindowTitle(tr("Survey - Complete"));
     setFixedHeight(SCREEN_HEIGHT);
     setFixedWidth(SCREEN_WIDTH);
+}
+
+void Complete::goExit(){
+    emit toExit();
 }

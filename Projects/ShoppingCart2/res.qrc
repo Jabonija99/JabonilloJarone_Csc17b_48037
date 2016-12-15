@@ -3,6 +3,7 @@
         <file>deps/hoop2.png</file>
         <file>deps/punchingbag2.png</file>
         <file>deps/tablet2.png</file>
+        <file>deps/splash.png</file>
     </qresource>
     <qresource prefix="/items">
         <file>inv/hoop.txt</file>

@@ -4,6 +4,9 @@
 #include <QMainWindow>
 #include "store.h"
 #include "info.h"
+#include "cart.h"
+#include "checkout.h"
+#include "complete.h"
 
 class QStackedWidget;
 class QPushButton;
@@ -21,6 +24,9 @@ private:
 
     Store *store;
     Info *infoscreen;
+    Cart *cart;
+    Checkout *checkout;
+    Complete *complete;
 
     //Menu buttons
     QMenu *fileMenu;
@@ -41,6 +47,8 @@ private slots:
     //Gui functions
     void nextWindow();
     void prevWindow();
+    void shop();
+    void pgcart();
 
     void updateStatusbar();
 
