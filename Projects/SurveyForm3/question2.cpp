@@ -14,31 +14,51 @@ Question2::Question2(QWidget *parent) :
 
 void Question2::setItems(){
     lbQ2 = new QLabel(tr("What's your favorite food out of the selection?"));
-    rbq2_1 = new QRadioButton(tr("Pizza"));
-    rbq2_2 = new QRadioButton(tr("Chicken"));
-    rbq2_3 = new QRadioButton(tr("Zombies"));
-    rbq2_4 = new QRadioButton(tr("Dog"));
+    rbq2_1 = new QRadioButton(tr("A: Pizza"));
+    rbq2_2 = new QRadioButton(tr("B: Chicken"));
+    rbq2_3 = new QRadioButton(tr("C: Zombies"));
+    rbq2_4 = new QRadioButton(tr("D: Dog"));
 
     rbq2_1->setEnabled(true);
 
     lbQ3 = new QLabel(tr("If you can live in any of the listed places,"
                       "where would you call home?"));
-    rbq3_1 = new QRadioButton(tr("Canada"));
-    rbq3_2 = new QRadioButton(tr("Caribbeans"));
-    rbq3_3 = new QRadioButton(tr("America"));
-    rbq3_4 = new QRadioButton(tr("Space"));
+    rbq3_1 = new QRadioButton(tr("A: Canada"));
+    rbq3_2 = new QRadioButton(tr("B: Caribbeans"));
+    rbq3_3 = new QRadioButton(tr("C: America"));
+    rbq3_4 = new QRadioButton(tr("D: Space"));
 
     rbq3_1->setEnabled(true);
+
+    btNext = new QPushButton("Next");
+    btNext->setFixedSize(100,50);
+    btPrev = new QPushButton("Prev");
+    btPrev->setFixedSize(100,50);
+
+    spBtn = new QSpacerItem(100,100);
 }
 
 void Question2::setConnect(){
+    connect(btNext, SIGNAL(clicked()),
+            this, SLOT(goNext()));
+    connect(btPrev, SIGNAL(clicked()),
+            this, SLOT(goPrev()));
 
 }
 
 void Question2::layItems(){
+
+    QHBoxLayout* loBtn = new QHBoxLayout;
+    loBtn->addSpacerItem(spBtn);
+    loBtn->addWidget(btPrev);
+    loBtn->addSpacerItem(spBtn);
+    loBtn->addWidget(btNext);
+    loBtn->addSpacerItem(spBtn);
+
     QVBoxLayout *mainlayout = new QVBoxLayout;
     mainlayout->addWidget(mkGroup_Q2());
     mainlayout->addWidget(mkGroup_Q3());
+    mainlayout->addLayout(loBtn);
 
     setLayout(mainlayout);
     setWindowTitle(tr("Survey - Question 2 & 3"));
@@ -76,4 +96,12 @@ QGroupBox *Question2::mkGroup_Q3(){
     groupbox->setLayout(vbox);
 
     return groupbox;
+}
+
+void Question2::goNext(){
+    emit toNext();
+}
+
+void Question2::goPrev(){
+    emit toPrev();
 }

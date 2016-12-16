@@ -26,6 +26,8 @@ void Complete::setItems(){
 void Complete::setConnect(){
     connect(btExit, SIGNAL(clicked()),
             this, SLOT(goExit()));
+    connect(btStats, SIGNAL(clicked()),
+            this, SLOT(goStat()));
 }
 
 void Complete::layItems(){
@@ -58,4 +60,8 @@ void Complete::layItems(){
 
 void Complete::goExit(){
     emit toExit();
+}
+
+void Complete::goStat(){
+    emit toStat();
 }

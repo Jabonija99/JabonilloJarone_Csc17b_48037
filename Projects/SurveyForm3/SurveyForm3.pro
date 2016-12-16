@@ -18,7 +18,10 @@ SOURCES += main.cpp \
     question1.cpp \
     question2.cpp \
     question3.cpp \
-    complete.cpp
+    complete.cpp \
+    stats.cpp \
+    dialog.cpp \
+    register.cpp
 
 HEADERS  += \
     mainwindow.h \
@@ -26,7 +29,13 @@ HEADERS  += \
     question1.h \
     question2.h \
     question3.h \
-    complete.h
+    complete.h \
+    stats.h \
+    dialog.h \
+    register.h
 
 RESOURCES += \
     res.qrc
+
+FORMS += \
+    dialog.ui

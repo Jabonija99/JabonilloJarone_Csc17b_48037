@@ -7,6 +7,8 @@
 #include "question2.h"
 #include "question3.h"
 #include "complete.h"
+#include "dialog.h"
+#include "stats.h"
 
 class QLabel;
 class QLineEdit;
@@ -32,9 +34,12 @@ private:
     Question2 *window3;
     Question3 *window4;
     Complete *window5;
+    Stats *window6;
 
     QPushButton *btNext;
     QPushButton *btPrev;
+
+
 
     //Menu buttons
     QMenu *fileMenu;
@@ -52,6 +57,7 @@ private slots:
     //Gui functions
     void nextWindow();
     void prevWindow();
+    void pgHome();
 
     void updateStatusbar();
 

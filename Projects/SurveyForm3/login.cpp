@@ -15,20 +15,21 @@ Login::Login(QWidget *parent):
 }
 
 void Login::setItems(){
-    lbTitle = new QLabel(tr("Awesome Survey"));
+    lbTitle = new QLabel(tr("Random Survey"));
     lbName = new QLabel(tr("Enter Username:"));
-    lbPin = new QLabel(tr("Enter PIN:"));
+    lbPin = new QLabel(tr("Enter Pass:"));
 
     leName = new QLineEdit;
     lePin = new QLineEdit;
 
     btLogin = new QPushButton(tr("Login"));
     btQuit = new QPushButton(tr("Quit"));
+    btRegister = new QPushButton(tr("Register"));
 
-    spTitle = new QSpacerItem(150,80);
+    spTitle = new QSpacerItem(150,30);
     spName = new QSpacerItem(150,50);
     spPin = new QSpacerItem(150, 50);
-    spBtn = new QSpacerItem(80, 100);
+    spBtn = new QSpacerItem(100, 300);
     spHorz = new QSpacerItem(200,SCREEN_HEIGHT);
     spVert = new QSpacerItem(SCREEN_WIDTH, 150);
 
@@ -73,6 +74,7 @@ void Login::layItems(){
     //Button layout
     QVBoxLayout *laybtns = new QVBoxLayout;
     laybtns->addWidget(btLogin);
+    laybtns->addWidget(btRegister);
     laybtns->addWidget(btQuit);
 
     QHBoxLayout *laybtn = new QHBoxLayout;

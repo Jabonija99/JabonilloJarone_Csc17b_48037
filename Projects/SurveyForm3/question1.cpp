@@ -23,23 +23,36 @@ void Question1::setItems(){
     rbFemale->setChecked(true);
 
     lbQ1 = new QLabel(tr("What is your favorite color?"));
-    rb1 = new QRadioButton(tr("Purple"));
-    rb2 = new QRadioButton(tr("Orange"));
-    rb3 = new QRadioButton(tr("Green"));
-    rb4 = new QRadioButton(tr("Red!...No wait. Blue!"));
+    rb1 = new QRadioButton(tr("A: Purple"));
+    rb2 = new QRadioButton(tr("B: Orange"));
+    rb3 = new QRadioButton(tr("C: Green"));
+    rb4 = new QRadioButton(tr("D: Red!...No wait. Blue!"));
 
     rb1->setChecked(true);
+
+    btNext = new QPushButton("Next");
+    btNext->setFixedSize(100,50);
+
+    spBtn = new QSpacerItem(100,100);
 }
 
 void Question1::setConnect(){
+    connect(btNext, SIGNAL(clicked()),
+            this, SLOT(goNext()));
 
 
 }
 
 void Question1::layItems(){
+    QHBoxLayout* loBtn = new QHBoxLayout;
+    loBtn->addSpacerItem(spBtn);
+    loBtn->addWidget(btNext);
+    loBtn->addSpacerItem(spBtn);
+
     QVBoxLayout *mainlayout = new QVBoxLayout;
     mainlayout->addWidget(mkGroup_info());
     mainlayout->addWidget(mkGroup_Q1());
+    mainlayout->addLayout(loBtn);
 
     setLayout(mainlayout);
     setWindowTitle(tr("Survey - Question 1"));
@@ -77,4 +90,8 @@ QGroupBox *Question1::mkGroup_Q1(){
     groupBox->setLayout(vbox);
 
     return groupBox;
+}
+
+void Question1::goNext(){
+    emit toNext();
 }

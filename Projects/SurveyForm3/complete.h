@@ -30,9 +30,11 @@ public:
 
 public slots:
     void goExit();
+    void goStat();
 
 signals:
     void toExit();
+    void toStat();
 };
 
 #endif // COMPLETE_H

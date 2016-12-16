@@ -22,7 +22,7 @@ private:
     //Label items
     QLabel *lbTitle;
     QLabel *lbName;
-    QLabel *lbPin;
+    QLabel *lbPin;      //Password
 
     //Line edit items
     QLineEdit *leName;
@@ -31,6 +31,7 @@ private:
     //Button items
     QPushButton *btLogin;
     QPushButton *btQuit;
+    QPushButton *btRegister;
 
     //Spacer items
     QSpacerItem *spTitle;//Title label spacer

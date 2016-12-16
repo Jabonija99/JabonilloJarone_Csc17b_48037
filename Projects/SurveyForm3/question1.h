@@ -8,6 +8,7 @@ class QLineEdit;
 class QRadioButton;
 class QPushButton;
 class QGroupBox;
+class QSpacerItem;
 
 class Question1 : public QDialog
 {
@@ -32,8 +33,18 @@ private:
     QRadioButton *rb4;
     QGroupBox *mkGroup_Q1();
 
+    QPushButton* btNext;
+
+    QSpacerItem* spBtn;
+
 public:
     Question1(QWidget *parent = 0);
+
+public slots:
+    void goNext();
+
+signals:
+    void toNext();
 };
 
 #endif // QUESTION1_H
